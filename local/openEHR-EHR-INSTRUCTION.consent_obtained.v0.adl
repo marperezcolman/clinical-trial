@@ -1,0 +1,74 @@
+archetype (adl_version=1.4; uid=28a96f52-b07e-4e53-b8b1-c24f1d0a1911)
+	openEHR-EHR-INSTRUCTION.consent_obtained.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-05-30">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"b8fe109c-bdb8-3d33-b42b-49723b1c0e60">
+		["MD5-CAM-1.0.1"] = <"d8b2c69be057c34b8a7552d6aa82d7d8">
+	>
+
+definition
+	INSTRUCTION[at0000] matches {    -- Consent Obtained
+		activities cardinality matches {0..*; unordered} matches {
+			ACTIVITY[at0001] matches {    -- Obtain consent
+				timing matches {
+					DV_PARSABLE[at0004] matches {*}    -- Date consent obtained
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE matches {
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Consent obtained?
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Consent Obtained">
+					description = <"Consent Obtained">
+				>
+				["at0001"] = <
+					text = <"Obtain consent">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Consent obtained?">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Date consent obtained">
+					description = <"">
+				>
+			>
+		>
+	>
