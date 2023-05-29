@@ -23,8 +23,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"17f17458ae686d406f24105bc7c07cc0">
 		["build_uid"] = <"b8fe109c-bdb8-3d33-b42b-49723b1c0e60">
-		["MD5-CAM-1.0.1"] = <"d8b2c69be057c34b8a7552d6aa82d7d8">
 	>
 
 definition
@@ -39,6 +39,11 @@ definition
 		protocol matches {
 			ITEM_TREE matches {
 				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Patient trial status
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
 					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Consent obtained?
 						value matches {
 							DV_CODED_TEXT matches {*}
@@ -67,6 +72,10 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Date consent obtained">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Patient trial status">
 					description = <"">
 				>
 			>
