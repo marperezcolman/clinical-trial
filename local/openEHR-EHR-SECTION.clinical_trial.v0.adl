@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0c9b118c549781ea4e65353ee2868971">
+		["MD5-CAM-1.0.1"] = <"ef18670825cf68f2b4d4e5822297041d">
 		["build_uid"] = <"314fe203-de42-3c44-a022-57abbd657cfb">
 	>
 
@@ -65,12 +65,76 @@ definition
 									}
 								}
 							}
+							ELEMENT[at0017] occurrences matches {0..1} matches {    -- Treatment type
+								value matches {
+									DV_CODED_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0021] occurrences matches {0..1} matches {    -- IRAS Number
+								value matches {
+									DV_IDENTIFIER matches {*}
+								}
+							}
+							ELEMENT[at0022] occurrences matches {0..1} matches {    -- Study ID Number
+								value matches {
+									DV_IDENTIFIER matches {*}
+								}
+							}
+							ELEMENT[at0026] occurrences matches {0..1} matches {    -- Date onto follow up
+								value matches {
+									DV_DATE matches {*}
+								}
+							}
+							ELEMENT[at0027] occurrences matches {0..1} matches {    -- Completion of trial follow up
+								value matches {
+									DV_DATE matches {*}
+								}
+							}
+							ELEMENT[at0028] occurrences matches {0..1} matches {    -- End of trial outcome
+								value matches {
+									DV_CODED_TEXT matches {*}
+								}
+							}
 						}
 					}
 				}
 			}
-			SECTION[at0002] occurrences matches {0..1} matches {*}    -- Patient related items
-			SECTION[at0003] occurrences matches {0..1} matches {*}    -- Site related items
+			ADMIN_ENTRY[at0015] occurrences matches {0..1} matches {    -- Site (Healthcare provider organisation)
+				data matches {
+					ITEM_TREE matches {
+						items cardinality matches {0..*; unordered} matches {
+							allow_archetype CLUSTER[at0016] occurrences matches {0..*} matches {    -- To use with healthcare provider organisation archetype
+								include
+									archetype_id/value matches {/.*/}
+							}
+							ELEMENT[at0018] occurrences matches {0..1} matches {    -- Referring organisation
+								value matches {
+									DV_CODED_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0019] occurrences matches {0..1} matches {    -- Referring site
+								value matches {
+									DV_CODED_TEXT matches {*}
+								}
+							}
+							allow_archetype CLUSTER[at0020] occurrences matches {0..*} matches {    -- SRC - Use with openEHR-EHR-CLUSTER.individual_professional_uk.v1
+								include
+									archetype_id/value matches {/.*/}
+							}
+							ELEMENT[at0024] occurrences matches {0..1} matches {    -- Follow up organisation (same list a healthcare provider org, same archetype reuse?)
+								value matches {
+									DV_CODED_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0025] occurrences matches {0..1} matches {    -- Follow up site (same list as referring site)
+								value matches {
+									DV_CODED_TEXT matches {*}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -81,14 +145,6 @@ ontology
 				["at0000"] = <
 					text = <"Clinical trial">
 					description = <"Clinical trial">
-				>
-				["at0002"] = <
-					text = <"Patient related items">
-					description = <"">
-				>
-				["at0003"] = <
-					text = <"Site related items">
-					description = <"">
 				>
 				["at0004"] = <
 					text = <"Clinical trial related items">
@@ -125,6 +181,58 @@ ontology
 				["at0013"] = <
 					text = <"Not applicable">
 					description = <"Consent not required">
+				>
+				["at0015"] = <
+					text = <"Site (Healthcare provider organisation)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"To use with healthcare provider organisation archetype">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Treatment type">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Referring organisation">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Referring site">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"SRC - Use with openEHR-EHR-CLUSTER.individual_professional_uk.v1">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"IRAS Number">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Study ID Number">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Follow up organisation (same list a healthcare provider org, same archetype reuse?)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Follow up site (same list as referring site)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Date onto follow up">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Completion of trial follow up">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"End of trial outcome">
+					description = <"">
 				>
 			>
 		>
