@@ -1,0 +1,58 @@
+archetype (adl_version=1.4; uid=4abab607-8230-4f06-8dd9-3fb3bace3a15)
+	openEHR-EHR-EVALUATION.clinical_trial.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-05-30">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"48ceea9f64030fb706c2e2889bfec82d">
+		["build_uid"] = <"d3161c63-f5cd-39c4-9e77-18d471feb15c">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Clinical trial
+		protocol matches {
+			ITEM_TREE matches {*}
+		}
+		data matches {
+			ITEM_TREE matches {
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {*}    -- ELEMENT
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Clinical trial">
+					description = <"Clinical trial">
+				>
+				["at0002"] = <
+					text = <"ELEMENT">
+					description = <"">
+				>
+			>
+		>
+	>
