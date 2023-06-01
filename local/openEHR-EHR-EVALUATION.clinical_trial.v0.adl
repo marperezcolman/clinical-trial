@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"403fbece430f51dbb2c5e1e26b60dc38">
+		["MD5-CAM-1.0.1"] = <"b341034ade8cecb823ec6cd7099b12f3">
 		["build_uid"] = <"d3161c63-f5cd-39c4-9e77-18d471feb15c">
 	>
 
@@ -36,14 +36,7 @@ definition
 						include
 							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.consent_details\.v0/}
 					}
-					use_node ELEMENT occurrences matches {0..1} /protocol/items[at0015]
-					ELEMENT[at0015] occurrences matches {0..1} matches {    -- Informed consent (link it to openEHR-EHR-ACTION.informed_consent.v0)
-						value matches {
-							DV_EHR_URI matches {
-								value matches {/openEHR-EHR-ACTION.informed_consent.v0/}
-							}
-						}
-					}
+					ELEMENT[at0015] occurrences matches {0..1} matches {*}    -- Informed consent (link it to openEHR-EHR-ACTION.informed_consent.v0)
 					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Date started
 						value matches {
 							DV_DATE matches {*}
@@ -180,6 +173,7 @@ ontology
 				["at0015"] = <
 					text = <"Informed consent (link it to openEHR-EHR-ACTION.informed_consent.v0)">
 					description = <"">
+					comment = <"openEHR-EHR-ACTION.informed_consent.v0">
 				>
 				["at0017"] = <
 					text = <"Trial protocol">
@@ -263,10 +257,6 @@ openEHR-EHR-ACTION.procedure.v1">
 				>
 				["at0043"] = <
 					text = <"Patient Status">
-					description = <"">
-				>
-				["at0054"] = <
-					text = <"ELEMENT">
 					description = <"">
 				>
 			>
