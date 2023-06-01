@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e178d00085ac307573f8174cb16c1c12">
+		["MD5-CAM-1.0.1"] = <"06b2dd5137f5366a496959e40325ed74">
 		["build_uid"] = <"d3161c63-f5cd-39c4-9e77-18d471feb15c">
 	>
 
@@ -160,7 +160,6 @@ definition
 								include
 									archetype_id/value matches {/.*/}
 							}
-							ELEMENT[at0078] occurrences matches {0..1} matches {*}    -- ELEMENT
 						}
 					}
 					ELEMENT[at0084] occurrences matches {0..1} matches {    -- Monitoring plan
@@ -347,10 +346,6 @@ Any organisation/regulation body approval of trial.">
 				["at0085"] = <
 					text = <"Trial documentation">
 					description = <"To be used to include any pertinent documentation related to the trial like audits, reviews, adenddums, etc.">
-				>
-				["at0078"] = <
-					text = <"ELEMENT">
-					description = <"*">
 				>
 			>
 		>
