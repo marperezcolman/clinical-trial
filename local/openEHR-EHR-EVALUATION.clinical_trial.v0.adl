@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"fe9277fbc5967e9f74a48769c430b826">
+		["MD5-CAM-1.0.1"] = <"97312fdc63448eeca14de58e496e42a1">
 		["build_uid"] = <"d3161c63-f5cd-39c4-9e77-18d471feb15c">
 	>
 
@@ -91,22 +91,53 @@ definition
 					}
 					CLUSTER[at0017] occurrences matches {0..1} matches {    -- Trial protocol
 						items cardinality matches {1..*; unordered} matches {
-							allow_archetype ELEMENT[at0019] occurrences matches {0..*} matches {    -- Trial medication
+							ELEMENT[at0040] occurrences matches {0..1} matches {    -- Treatment type(s)
+								value matches {
+									DV_CODED_TEXT matches {*}
+								}
+							}
+							CLUSTER[at0041] occurrences matches {0..1} matches {    -- Specific description
+								items cardinality matches {1..*; unordered} matches {
+									allow_archetype ELEMENT[at0019] occurrences matches {0..*} matches {    -- Trial medication (incl chemotherapy)
+										include
+											archetype_id/value matches {/.*/}
+									}
+									allow_archetype CLUSTER[at0023] occurrences matches {0..*} matches {    -- Trial procedure (as cluster)
+										include
+											archetype_id/value matches {/.*/}
+									}
+									allow_archetype ELEMENT[at0035] occurrences matches {0..1} matches {    -- Trial procedure (as Element)
+										include
+											archetype_id/value matches {/.*/}
+									}
+									allow_archetype CLUSTER[at0024] occurrences matches {0..*} matches {    -- Trial radiation treatment
+										include
+											archetype_id/value matches {/.*/}
+									}
+								}
+							}
+							allow_archetype CLUSTER[at0039] occurrences matches {0..*} matches {    -- Frequency
+								include
+									archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.timing_daily\.v1|openEHR-EHR-CLUSTER\.timing_nondaily\.v1/}
+							}
+							allow_archetype CLUSTER[at0038] occurrences matches {0..*} matches {    -- Adverse reaction/Side effect
 								include
 									archetype_id/value matches {/.*/}
 							}
-							allow_archetype CLUSTER[at0023] occurrences matches {0..*} matches {    -- Trial procedure
-								include
-									archetype_id/value matches {/.*/}
+							ELEMENT[at0042] occurrences matches {0..1} matches {    -- Complications
+								value matches {
+									DV_CODED_TEXT matches {*}
+								}
 							}
-							allow_archetype ELEMENT[at0035] occurrences matches {0..1} matches {    -- ELEMENT
-								include
-									archetype_id/value matches {/.*/}
-							}
-							allow_archetype CLUSTER[at0024] occurrences matches {0..*} matches {    -- Trial radiation treatment
-								include
-									archetype_id/value matches {/.*/}
-							}
+						}
+					}
+					allow_archetype ELEMENT[at0037] occurrences matches {0..1} matches {    -- Clinician
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0043] occurrences matches {0..1} matches {    -- Patient Status
+						value matches {
+							DV_CODED_TEXT matches {*}
 						}
 					}
 				}
@@ -149,12 +180,12 @@ ontology
 					comment = <"Select frequency, duration, etc from within each slot">
 				>
 				["at0019"] = <
-					text = <"Trial medication">
+					text = <"Trial medication (incl chemotherapy)">
 					description = <"">
 					comment = <"openEHR-EHR-INSTRUCTION.medication_order.v3">
 				>
 				["at0023"] = <
-					text = <"Trial procedure">
+					text = <"Trial procedure (as cluster)">
 					description = <"">
 				>
 				["at0024"] = <
@@ -190,8 +221,41 @@ ontology
 					description = <"">
 				>
 				["at0035"] = <
-					text = <"ELEMENT">
-					comment = <"openEHR-EHR-INSTRUCTION.medication_order.v3">
+					text = <"Trial procedure (as Element)">
+					comment = <"To use with
+openEHR-EHR-ACTION.procedure.v1">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Clinician">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Adverse reaction/Side effect">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Frequency">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Treatment type(s)">
+					description = <"To select treatment being provided:
+- chemotherapy
+- radiotherapy
+- procedure (surgery)
+- combinations">
+				>
+				["at0041"] = <
+					text = <"Specific description">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Complications">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Patient Status">
 					description = <"">
 				>
 			>
