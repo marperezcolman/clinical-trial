@@ -23,19 +23,44 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"48ceea9f64030fb706c2e2889bfec82d">
+		["MD5-CAM-1.0.1"] = <"9759d5d9d4882bd1c653691bb2989983">
 		["build_uid"] = <"d3161c63-f5cd-39c4-9e77-18d471feb15c">
 	>
 
 definition
 	EVALUATION[at0000] matches {    -- Clinical trial
 		protocol matches {
-			ITEM_TREE matches {*}
+			ITEM_TREE matches {
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0003] occurrences matches {0..*} matches {    -- Informed consent
+						include
+							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.consent_details\.v0/}
+					}
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Date started
+						value matches {
+							DV_DATE matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- Date finished
+						value matches {
+							DV_DATE matches {*}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..*} matches {    -- Follow up dates
+						value matches {
+							DV_DATE matches {*}
+						}
+					}
+				}
+			}
 		}
 		data matches {
 			ITEM_TREE matches {
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0002] occurrences matches {0..1} matches {*}    -- ELEMENT
+					allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {    -- CLUSTER_SLOT
+						include
+							archetype_id/value matches {/.*/}
+					}
 				}
 			}
 		}
@@ -49,8 +74,25 @@ ontology
 					text = <"Clinical trial">
 					description = <"Clinical trial">
 				>
-				["at0002"] = <
-					text = <"ELEMENT">
+				["at0003"] = <
+					text = <"Informed consent">
+					description = <"This slot is for the inly Cluster archetype on Informed consent but suggest including details from openEHR-EHR-ACTION.informed_consent.v0 - linked in the Element">
+					comment = <"Consider including details from openEHR-EHR-ACTION.informed_consent.v0 and openEHR-EHR-INSTRUCTION.informed_consent_request.v0">
+				>
+				["at0011"] = <
+					text = <"Date started">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Date finished">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Follow up dates">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"CLUSTER_SLOT">
 					description = <"">
 				>
 			>
