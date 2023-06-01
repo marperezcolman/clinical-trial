@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5fca58e13b3ed2701a7018aa5cde6412">
+		["MD5-CAM-1.0.1"] = <"fe9277fbc5967e9f74a48769c430b826">
 		["build_uid"] = <"d3161c63-f5cd-39c4-9e77-18d471feb15c">
 	>
 
@@ -58,10 +58,52 @@ definition
 		data matches {
 			ITEM_TREE matches {
 				items cardinality matches {0..*; unordered} matches {
+					CLUSTER[at0029] occurrences matches {0..1} matches {    -- Trial specifications
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0030] occurrences matches {0..1} matches {    -- Study number
+								value matches {
+									DV_IDENTIFIER matches {*}
+								}
+							}
+							ELEMENT[at0031] occurrences matches {0..1} matches {    -- IRAS number
+								value matches {
+									DV_IDENTIFIER matches {*}
+								}
+							}
+							ELEMENT[at0032] occurrences matches {0..1} matches {    -- Trial name/acronym
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0025] occurrences matches {0..1} matches {    -- Organisation
+						items cardinality matches {1..*; unordered} matches {
+							allow_archetype CLUSTER[at0026] occurrences matches {0..*} matches {    -- Referring organisation
+								include
+									archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.organisation\.v1/}
+							}
+							allow_archetype CLUSTER[at0027] occurrences matches {0..*} matches {    -- Treating organisation
+								include
+									archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.organisation\.v1/}
+							}
+						}
+					}
 					CLUSTER[at0017] occurrences matches {0..1} matches {    -- Trial protocol
 						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0018] occurrences matches {0..1} matches {*}    -- Medication
-							allow_archetype ELEMENT[at0019] occurrences matches {0..*} matches {    -- ELEMENT
+							allow_archetype ELEMENT[at0019] occurrences matches {0..*} matches {    -- Trial medication
+								include
+									archetype_id/value matches {/.*/}
+							}
+							allow_archetype CLUSTER[at0023] occurrences matches {0..*} matches {    -- Trial procedure
+								include
+									archetype_id/value matches {/.*/}
+							}
+							allow_archetype ELEMENT[at0035] occurrences matches {0..1} matches {    -- ELEMENT
+								include
+									archetype_id/value matches {/.*/}
+							}
+							allow_archetype CLUSTER[at0024] occurrences matches {0..*} matches {    -- Trial radiation treatment
 								include
 									archetype_id/value matches {/.*/}
 							}
@@ -104,15 +146,53 @@ ontology
 				["at0017"] = <
 					text = <"Trial protocol">
 					description = <"">
-				>
-				["at0018"] = <
-					text = <"Medication">
-					description = <"">
+					comment = <"Select frequency, duration, etc from within each slot">
 				>
 				["at0019"] = <
-					text = <"ELEMENT">
+					text = <"Trial medication">
 					description = <"">
 					comment = <"openEHR-EHR-INSTRUCTION.medication_order.v3">
+				>
+				["at0023"] = <
+					text = <"Trial procedure">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Trial radiation treatment">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Organisation">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Referring organisation">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Treating organisation">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Trial specifications">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Study number">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"IRAS number">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Trial name/acronym">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"ELEMENT">
+					comment = <"openEHR-EHR-INSTRUCTION.medication_order.v3">
+					description = <"">
 				>
 			>
 		>
