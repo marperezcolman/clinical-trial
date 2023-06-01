@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"06b2dd5137f5366a496959e40325ed74">
+		["MD5-CAM-1.0.1"] = <"c51dd1eba3d8e164cca13b7de12ea7ad">
 		["build_uid"] = <"d3161c63-f5cd-39c4-9e77-18d471feb15c">
 	>
 
@@ -103,7 +103,7 @@ definition
 					}
 					allow_archetype CLUSTER[at0064] occurrences matches {0..*} matches {    -- Investigator/Clinician
 						include
-							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.person\.v1/}
+							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.person\.v1|openEHR-EHR-CLUSTER\.structured_name\.v1/}
 					}
 					CLUSTER[at0025] occurrences matches {0..1} matches {    -- Organisation/Institution (medical)
 						items cardinality matches {1..*; unordered} matches {
@@ -307,7 +307,8 @@ openEHR-EHR-ACTION.procedure.v1">
 				>
 				["at0064"] = <
 					text = <"Investigator/Clinician">
-					description = <"">
+					description = <"Details (name, last name, profession, professional registration number/ID, etc) required from the main trial investigator and/or senior responsible clinician (UK).">
+					comment = <"Consider including details from the \"Structured Name\" Archetype for correct staff identification, and details from \"Person\" Archetype to complete the details.">
 				>
 				["at0067"] = <
 					text = <"Informed consent obtained">
