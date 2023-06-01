@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5076eae9b01235e4dd73b1f660a327ad">
+		["MD5-CAM-1.0.1"] = <"e178d00085ac307573f8174cb16c1c12">
 		["build_uid"] = <"d3161c63-f5cd-39c4-9e77-18d471feb15c">
 	>
 
@@ -58,6 +58,11 @@ definition
 					ELEMENT[at0013] occurrences matches {0..*} matches {    -- Follow up dates
 						value matches {
 							DV_DATE matches {*}
+						}
+					}
+					ELEMENT[at0085] occurrences matches {0..1} matches {    -- Trial documentation
+						value matches {
+							DV_TEXT matches {*}
 						}
 					}
 				}
@@ -100,13 +105,13 @@ definition
 						include
 							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.person\.v1/}
 					}
-					CLUSTER[at0025] occurrences matches {0..1} matches {    -- Organisation
+					CLUSTER[at0025] occurrences matches {0..1} matches {    -- Organisation/Institution (medical)
 						items cardinality matches {1..*; unordered} matches {
 							allow_archetype CLUSTER[at0026] occurrences matches {0..1} matches {    -- Referring organisation
 								include
 									archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.organisation\.v1/}
 							}
-							allow_archetype CLUSTER[at0027] occurrences matches {0..1} matches {    -- Treating organisation
+							allow_archetype CLUSTER[at0027] occurrences matches {0..1} matches {    -- Research organisation
 								include
 									archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.organisation\.v1/}
 							}
@@ -120,6 +125,11 @@ definition
 					ELEMENT[at0081] occurrences matches {0..1} matches {    -- IRB Approval
 						value matches {
 							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0083] occurrences matches {0..1} matches {    -- Trial design
+						value matches {
+							DV_CODED_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0082] occurrences matches {0..1} matches {    -- Randomization
@@ -153,7 +163,12 @@ definition
 							ELEMENT[at0078] occurrences matches {0..1} matches {*}    -- ELEMENT
 						}
 					}
-					allow_archetype CLUSTER[at0039] occurrences matches {0..*} matches {    -- Frequency
+					ELEMENT[at0084] occurrences matches {0..1} matches {    -- Monitoring plan
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0039] occurrences matches {0..*} matches {    -- Frequency of administration/procedure
 						include
 							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.timing_daily\.v1|openEHR-EHR-CLUSTER\.timing_nondaily\.v1/}
 					}
@@ -225,7 +240,7 @@ ontology
 					description = <"">
 				>
 				["at0025"] = <
-					text = <"Organisation">
+					text = <"Organisation/Institution (medical)">
 					description = <"">
 				>
 				["at0026"] = <
@@ -233,7 +248,7 @@ ontology
 					description = <"">
 				>
 				["at0027"] = <
-					text = <"Treating organisation">
+					text = <"Research organisation">
 					description = <"">
 				>
 				["at0030"] = <
@@ -264,7 +279,7 @@ openEHR-EHR-ACTION.procedure.v1">
 					description = <"">
 				>
 				["at0039"] = <
-					text = <"Frequency">
+					text = <"Frequency of administration/procedure">
 					description = <"">
 				>
 				["at0040"] = <
@@ -301,7 +316,7 @@ openEHR-EHR-ACTION.procedure.v1">
 				>
 				["at0068"] = <
 					text = <"Trial status">
-					description = <"Options: ongoing, suspended, terminated, finalised">
+					description = <"Options: ongoing, suspended, terminated, patient withdrawal, finalised">
 				>
 				["at0070"] = <
 					text = <"PROMs/PREMs">
@@ -320,6 +335,18 @@ Any organisation/regulation body approval of trial.">
 				["at0082"] = <
 					text = <"Randomization">
 					description = <"To include details related to randomization. Can be a code, a name, etc. as per need/request.">
+				>
+				["at0083"] = <
+					text = <"Trial design">
+					description = <"">
+				>
+				["at0084"] = <
+					text = <"Monitoring plan">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"Trial documentation">
+					description = <"To be used to include any pertinent documentation related to the trial like audits, reviews, adenddums, etc.">
 				>
 				["at0078"] = <
 					text = <"ELEMENT">
