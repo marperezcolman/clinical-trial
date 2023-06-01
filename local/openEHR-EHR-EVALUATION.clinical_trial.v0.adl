@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a57ad50c5d38b858192a1bfe4672b745">
+		["MD5-CAM-1.0.1"] = <"909cca75eac14e807285bcf89231f539">
 		["build_uid"] = <"d3161c63-f5cd-39c4-9e77-18d471feb15c">
 	>
 
@@ -155,6 +155,11 @@ definition
 							DV_CODED_TEXT matches {*}
 						}
 					}
+					ELEMENT[at0070] occurrences matches {0..1} matches {    -- PROMs/PREMs
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
 				}
 			}
 		}
@@ -281,6 +286,10 @@ openEHR-EHR-ACTION.procedure.v1">
 				["at0068"] = <
 					text = <"Trial status">
 					description = <"Options: ongoing, suspended, terminated, finalised">
+				>
+				["at0070"] = <
+					text = <"PROMs/PREMs">
+					description = <"">
 				>
 			>
 		>
