@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9759d5d9d4882bd1c653691bb2989983">
+		["MD5-CAM-1.0.1"] = <"5fca58e13b3ed2701a7018aa5cde6412">
 		["build_uid"] = <"d3161c63-f5cd-39c4-9e77-18d471feb15c">
 	>
 
@@ -36,6 +36,7 @@ definition
 						include
 							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.consent_details\.v0/}
 					}
+					ELEMENT[at0015] occurrences matches {0..1} matches {*}    -- Informed consent (link it to openEHR-EHR-ACTION.informed_consent.v0)
 					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Date started
 						value matches {
 							DV_DATE matches {*}
@@ -57,9 +58,14 @@ definition
 		data matches {
 			ITEM_TREE matches {
 				items cardinality matches {0..*; unordered} matches {
-					allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {    -- CLUSTER_SLOT
-						include
-							archetype_id/value matches {/.*/}
+					CLUSTER[at0017] occurrences matches {0..1} matches {    -- Trial protocol
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0018] occurrences matches {0..1} matches {*}    -- Medication
+							allow_archetype ELEMENT[at0019] occurrences matches {0..*} matches {    -- ELEMENT
+								include
+									archetype_id/value matches {/.*/}
+							}
+						}
 					}
 				}
 			}
@@ -91,9 +97,22 @@ ontology
 					text = <"Follow up dates">
 					description = <"">
 				>
-				["at0014"] = <
-					text = <"CLUSTER_SLOT">
+				["at0015"] = <
+					text = <"Informed consent (link it to openEHR-EHR-ACTION.informed_consent.v0)">
 					description = <"">
+				>
+				["at0017"] = <
+					text = <"Trial protocol">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Medication">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"ELEMENT">
+					description = <"">
+					comment = <"openEHR-EHR-INSTRUCTION.medication_order.v3">
 				>
 			>
 		>
