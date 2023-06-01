@@ -23,21 +23,29 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"b341034ade8cecb823ec6cd7099b12f3">
+		["MD5-CAM-1.0.1"] = <"a57ad50c5d38b858192a1bfe4672b745">
 		["build_uid"] = <"d3161c63-f5cd-39c4-9e77-18d471feb15c">
 	>
 
 definition
-	EVALUATION[at0000] matches {    -- Clinical trial
+	EVALUATION[at0000] occurrences matches {0..*} matches {    -- Clinical trial
 		protocol matches {
 			ITEM_TREE matches {
 				items cardinality matches {0..*; unordered} matches {
-					allow_archetype CLUSTER[at0003] occurrences matches {0..*} matches {    -- Informed consent
+					ELEMENT[at0067] occurrences matches {0..1} matches {    -- Informed consent obtained
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					allow_archetype ELEMENT[at0037] occurrences matches {0..1} matches {    -- Informed consent (link to Informed consent (link it to openEHR-EHR-ACTION.informed_consent.v0))
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0003] occurrences matches {0..*} matches {    -- Informed consent (linked to only cluster)
 						include
 							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.consent_details\.v0/}
 					}
-					ELEMENT[at0015] occurrences matches {0..1} matches {*}    -- Informed consent (link it to openEHR-EHR-ACTION.informed_consent.v0)
-					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Date started
+					ELEMENT[at0011] matches {    -- Date started
 						value matches {
 							DV_DATE matches {*}
 						}
@@ -58,82 +66,89 @@ definition
 		data matches {
 			ITEM_TREE matches {
 				items cardinality matches {0..*; unordered} matches {
-					CLUSTER[at0029] occurrences matches {0..1} matches {    -- Trial specifications
-						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0030] occurrences matches {0..1} matches {    -- Study number
-								value matches {
-									DV_IDENTIFIER matches {*}
-								}
-							}
-							ELEMENT[at0031] occurrences matches {0..1} matches {    -- IRAS number
-								value matches {
-									DV_IDENTIFIER matches {*}
-								}
-							}
-							ELEMENT[at0032] occurrences matches {0..1} matches {    -- Trial name/acronym
-								value matches {
-									DV_TEXT matches {*}
-								}
-							}
+					ELEMENT[at0030] occurrences matches {0..1} matches {    -- Study number
+						value matches {
+							DV_IDENTIFIER matches {*}
 						}
+					}
+					ELEMENT[at0031] occurrences matches {0..1} matches {    -- IRAS number
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0061] occurrences matches {0..1} matches {    -- Number/Order
+						value matches {
+							DV_ORDINAL matches {*}
+						}
+					}
+					ELEMENT[at0032] occurrences matches {0..1} matches {    -- Trial name/acronym
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0068] occurrences matches {0..1} matches {    -- Trial status
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0059] occurrences matches {0..1} matches {    -- Intent of treatment
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0064] occurrences matches {0..*} matches {    -- Clinician
+						include
+							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.person\.v1/}
 					}
 					CLUSTER[at0025] occurrences matches {0..1} matches {    -- Organisation
 						items cardinality matches {1..*; unordered} matches {
-							allow_archetype CLUSTER[at0026] occurrences matches {0..*} matches {    -- Referring organisation
+							allow_archetype CLUSTER[at0026] occurrences matches {0..1} matches {    -- Referring organisation
 								include
 									archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.organisation\.v1/}
 							}
-							allow_archetype CLUSTER[at0027] occurrences matches {0..*} matches {    -- Treating organisation
+							allow_archetype CLUSTER[at0027] occurrences matches {0..1} matches {    -- Treating organisation
 								include
 									archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.organisation\.v1/}
 							}
 						}
 					}
-					CLUSTER[at0017] occurrences matches {0..1} matches {    -- Trial protocol
+					CLUSTER[at0017] occurrences matches {0..1} matches {    -- Treatment type(s)
 						items cardinality matches {1..*; unordered} matches {
 							ELEMENT[at0040] occurrences matches {0..1} matches {    -- Treatment type(s)
 								value matches {
 									DV_CODED_TEXT matches {*}
 								}
 							}
-							CLUSTER[at0041] occurrences matches {0..1} matches {    -- Specific description
-								items cardinality matches {1..*; unordered} matches {
-									allow_archetype ELEMENT[at0019] occurrences matches {0..*} matches {    -- Trial medication (incl chemotherapy)
-										include
-											archetype_id/value matches {/.*/}
-									}
-									allow_archetype CLUSTER[at0023] occurrences matches {0..*} matches {    -- Trial procedure (as cluster)
-										include
-											archetype_id/value matches {/.*/}
-									}
-									allow_archetype ELEMENT[at0035] occurrences matches {0..1} matches {    -- Trial procedure (as Element)
-										include
-											archetype_id/value matches {/.*/}
-									}
-									allow_archetype CLUSTER[at0024] occurrences matches {0..*} matches {    -- Trial radiation treatment
-										include
-											archetype_id/value matches {/.*/}
-									}
-								}
-							}
-							allow_archetype CLUSTER[at0039] occurrences matches {0..*} matches {    -- Frequency
-								include
-									archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.timing_daily\.v1|openEHR-EHR-CLUSTER\.timing_nondaily\.v1/}
-							}
-							allow_archetype CLUSTER[at0038] occurrences matches {0..*} matches {    -- Adverse reaction/Side effect
+							allow_archetype CLUSTER[at0023] occurrences matches {0..*} matches {    -- Trial procedure (as cluster)
 								include
 									archetype_id/value matches {/.*/}
 							}
-							ELEMENT[at0042] occurrences matches {0..1} matches {    -- Complications
-								value matches {
-									DV_CODED_TEXT matches {*}
-								}
+							allow_archetype ELEMENT[at0035] occurrences matches {0..1} matches {    -- Trial procedure (as Element)
+								include
+									archetype_id/value matches {/.*/}
+							}
+							allow_archetype CLUSTER[at0024] occurrences matches {0..*} matches {    -- Trial radiation treatment
+								include
+									archetype_id/value matches {/.*/}
+							}
+							allow_archetype ELEMENT[at0019] occurrences matches {0..*} matches {    -- Trial medication (incl chemotherapy)
+								include
+									archetype_id/value matches {/.*/}
 							}
 						}
 					}
-					allow_archetype ELEMENT[at0037] occurrences matches {0..1} matches {    -- Clinician
+					allow_archetype CLUSTER[at0039] occurrences matches {0..*} matches {    -- Frequency
+						include
+							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.timing_daily\.v1|openEHR-EHR-CLUSTER\.timing_nondaily\.v1/}
+					}
+					allow_archetype CLUSTER[at0038] occurrences matches {0..*} matches {    -- Adverse reaction/Side effect
 						include
 							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0042] occurrences matches {0..1} matches {    -- Complications
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
 					}
 					ELEMENT[at0043] occurrences matches {0..1} matches {    -- Patient Status
 						value matches {
@@ -154,7 +169,7 @@ ontology
 					description = <"Clinical trial">
 				>
 				["at0003"] = <
-					text = <"Informed consent">
+					text = <"Informed consent (linked to only cluster)">
 					description = <"This slot is for the inly Cluster archetype on Informed consent but suggest including details from openEHR-EHR-ACTION.informed_consent.v0 - linked in the Element">
 					comment = <"Consider including details from openEHR-EHR-ACTION.informed_consent.v0 and openEHR-EHR-INSTRUCTION.informed_consent_request.v0">
 				>
@@ -170,13 +185,8 @@ ontology
 					text = <"Follow up dates">
 					description = <"">
 				>
-				["at0015"] = <
-					text = <"Informed consent (link it to openEHR-EHR-ACTION.informed_consent.v0)">
-					description = <"">
-					comment = <"openEHR-EHR-ACTION.informed_consent.v0">
-				>
 				["at0017"] = <
-					text = <"Trial protocol">
+					text = <"Treatment type(s)">
 					description = <"">
 					comment = <"Select frequency, duration, etc from within each slot">
 				>
@@ -205,10 +215,6 @@ ontology
 					text = <"Treating organisation">
 					description = <"">
 				>
-				["at0029"] = <
-					text = <"Trial specifications">
-					description = <"">
-				>
 				["at0030"] = <
 					text = <"Study number">
 					description = <"">
@@ -228,7 +234,8 @@ openEHR-EHR-ACTION.procedure.v1">
 					description = <"">
 				>
 				["at0037"] = <
-					text = <"Clinician">
+					text = <"Informed consent (link to Informed consent (link it to openEHR-EHR-ACTION.informed_consent.v0))">
+					comment = <"Informed consent (link it to openEHR-EHR-ACTION.informed_consent.v0)">
 					description = <"">
 				>
 				["at0038"] = <
@@ -247,10 +254,6 @@ openEHR-EHR-ACTION.procedure.v1">
 - procedure (surgery)
 - combinations">
 				>
-				["at0041"] = <
-					text = <"Specific description">
-					description = <"">
-				>
 				["at0042"] = <
 					text = <"Complications">
 					description = <"">
@@ -258,6 +261,26 @@ openEHR-EHR-ACTION.procedure.v1">
 				["at0043"] = <
 					text = <"Patient Status">
 					description = <"">
+				>
+				["at0059"] = <
+					text = <"Intent of treatment">
+					description = <"Different aims of the treatment provided, like curative, palliative">
+				>
+				["at0061"] = <
+					text = <"Number/Order">
+					description = <"For patients receiving multiple trials,this defines the number in the sequence">
+				>
+				["at0064"] = <
+					text = <"Clinician">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"Informed consent obtained">
+					description = <"To describe if the informed consent has been obtained/signed. Pssibly Yes/No/Unable">
+				>
+				["at0068"] = <
+					text = <"Trial status">
+					description = <"Options: ongoing, suspended, terminated, finalised">
 				>
 			>
 		>
