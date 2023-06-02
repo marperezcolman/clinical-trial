@@ -19,7 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "c4557998cd7d35a810fe1e2903d5cdac"
+      "MD5-CAM-1.0.1" : "2ce7251b4e023a119e342b227af950bc",
+      "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD",
+      "sem_ver" : "1.0.0",
+      "build_uid" : ""
     },
     "details" : {
       "en" : {
@@ -123,6 +126,81 @@
         "otherDetails" : {
           "notes" : "Generated automatically by Adl Designer"
         }
+      },
+      "de" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "de"
+        },
+        "purpose" : "Dient zur Erfassung der Details auf Dokumentebene einer einzelnen Interaktion, eines Kontaktes oder eines Pflegeereignisses zwischen einer zu pflegenden Person und Gesundheitsdienstleistern für die Bereitstellung von Gesundheitsdienstleistung. Dies kann entweder Angesicht zu Angesicht (Face-to-Face), über Telefon oder ein anderes elektronisches Medium erfolgen.",
+        "keywords" : [ "Begegnung", "Kontakt", "Visite", "Pflegeereignis", "Ereignis", "Besuch" ],
+        "use" : "Verwendung als generischer Container auf Dokumentebene zum Aufzeichnen von Details einer einzelnen Interaktion, eines Kontakts oder eines Pflegeereignisses zwischen einem Subjekt und einem Gesundheitsdienstleister.\r\nDer Kontakt kann von Angesicht zu Angesicht, über Telefon oder ein anderes elektronisches Medium erfolgen. Die Modalität kann bei Bedarf über das Referenzmodell COMPOSITION / mode Attribut erfasst werden.\r\n\r\nDie Hauptabschnitte / Inhaltskomponente wurde absichtlich nicht stark eingeschränkt. Dies ermöglicht es, diese Composition innerhalb eines Templates mit beliebigen SECTION- oder ENTRY-Archetypen zu füllen, die für den klinischen Zweck geeignet sind.\r\n\r\nAuch wenn sie für den klinischen Inhalt nicht eingeschränkt sind, bietet die Spezifikation von COMPOSITION.Encounter einen signifikanten Wert, da sie eine explizite Abfrage aller Encounter innerhalb einer Patientenakte ermöglicht.\r\n\r\nDie Context-Komponente enthält einen optionalen 'Extension' SLOT, der während des Template-Designs zu verschiedenen Zwecken verwendet werden kann:\r\n- Zum Hinzufügen von optionalen Kontextinformationen, wie Informationen zur Episode \r\n- Zur Vereinheitlichung oder Verknüpfung mit Modellformalismen wie FHIR oder CIMI \r\n\r\nTypische Beispiele sind eine klinische Visite, eine pflegerische Überwachung oder eine telemedizinische Beratung.",
+        "misuse" : "Nicht zur Darstellung von Details einer gesamten Behandlungsepisode geeignet.\r\n\r\nNicht zur Darstellung von persistenten, zusammengefassten Patienteninformationen wie eine Problemliste oder eine Medikamentenübersicht geeignet.\r\n\r\nNicht zur Darstellung von Berichten eines Diagnosedienstes, z.B. Bildgebung oder Labortests, geeignet.\r\n\r\nNicht zur Darstellung von der gleichnamige FHIR-Ressource geeignet- dort liegt eine Diskrepanz vor.",
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "fi" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "fi"
+        },
+        "purpose" : "*To record the document level details of a single interaction, contact or care event between a subject of care and healthcare provider(s) for the provision of healthcare service(s). This can be either a face-to-face or remote interaction.(en)",
+        "keywords" : [ "*encounter(en)", "*contact(en)", "*visit(en)", "*care event(en)" ],
+        "use" : "*Use as a generic document-level container for recording details of a single interaction, contact or care event between a subject of care and healthcare provider(s).\r\nThe contact may be face-to-face, via telephone or another electronic medium. Modality can be captured, if required, via the reference model COMPOSITION/mode attribute.\r\n\r\nThe main Sections/Content component has been deliberately left unconstrained. This will allow it to be populated with any SECTION or ENTRY archetypes appropriate for the clinical purpose within a template.\r\n\r\nEven though unconstrained for clinical content, specification of COMPOSITION.Encounter provides significant value by allowing for explicit querying of all Encounters within a patient record.\r\n\r\nThe Context component contains an optional 'Extension' SLOT that can be used in template design to:\r\n- add optional contextual information, such as episode information; or\r\n- allow for harmonisation or alignment with other model formalisms such as FHIR or CIMI, such as explicit representation of participants that are usually managed by the openEHR Reference Model in an openEHR archetype.\r\n\r\nTypical examples are a clinic visit, a nursing observation or a telemedicine consultation.(en)",
+        "misuse" : "*Not to be used to record details about an entire episode of care.\r\n\r\nNot to be used to carry persistent, summarised patient information, such as a problem list or medication summary.\r\n\r\nNot to be used to represent the report of a diagnostic service, such as imaging or laboratory testing.\r\n\r\nNot to be used to represent the FHIR resource of the same name - there is a mismatch scope and intent.(en)",
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "it" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "it"
+        },
+        "purpose" : "Registrare i dettagli a livello di documento di una singola interazione, contatto o evento di cura tra un soggetto di cura e il/i fornitore/i di assistenza sanitaria per la fornitura di servizi sanitari. Può trattarsi di un'interazione faccia a faccia o a distanza.",
+        "keywords" : [ "incontro", "contatto", "visita", "evento di cura" ],
+        "use" : "Utilizzare come contenitore generico a livello di documento per registrare i dettagli di una singola interazione, contatto o evento di cura tra un soggetto di cura e il/i fornitore/i di assistenza sanitaria.\r\nIl contatto può avvenire faccia a faccia, per telefono o su un altro mezzo elettronico. La modalità può essere catturata, se necessario, tramite il modello di riferimento COMPOSITION/mode attribute.\r\n\r\nLa principale sezione/componente del contenuto è stata volutamente lasciata libera. Ciò consentirà di popolarla con qualsiasi archetipo di SECTION o ENTRY propriato per lo scopo clinico all'interno di un modello.\r\n\r\nAnche se non è vincolata al contenuto clinico, la specificazione di COMPOSITION.Contatto fornisce un valore significativo, consentendo l'interrogazione esplicita di tutti gli Incontri all'interno della cartella clinica di un paziente.\r\n\r\nIl componente Context contiene un SLOT opzionale 'Extension' SLOT che può essere utilizzato nella progettazione del template per:\r\n- aggiungere informazioni contestuali opzionali, come le informazioni sugli episodi; oppure\r\n- consentire l'armonizzazione o l'allineamento con altri formalismi del modello come FHIR o CIMI, come la rappresentazione esplicita dei partecipanti che sono solitamente gestiti dal modello di riferimento openEHR in un archetipo openEHR.\r\n\r\nEsempi tipici sono una visita in clinica, un'osservazione infermieristica o un consulto di telemedicina.",
+        "misuse" : "Da non utilizzare per portare informazioni persistenti e riassunte sui pazienti, come un elenco di problemi o un sommario dei farmaci.\r\n\r\nDa non utilizzare per rappresentare il rapporto di un servizio diagnostico, come l'imaging o gli esami di laboratorio.\r\n\r\nNon deve essere utilizzato per rappresentare l'omonima risorsa FHIR - c'è un disallineamento di scopo e di intenti.",
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "fr" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "fr"
+        },
+        "purpose" : "*To record the document level details of a single interaction, contact or care event between a subject of care and healthcare provider(s) for the provision of healthcare service(s). This can be either a face-to-face or remote interaction.(en)",
+        "keywords" : [ "rencontre", "contact", "visite", "événement de soins" ],
+        "use" : "*Use as a generic document-level container for recording details of a single interaction, contact or care event between a subject of care and healthcare provider(s).\r\nThe contact may be face-to-face, via telephone or another electronic medium. Modality can be captured, if required, via the reference model COMPOSITION/mode attribute.\r\n\r\nThe main Sections/Content component has been deliberately left unconstrained. This will allow it to be populated with any SECTION or ENTRY archetypes appropriate for the clinical purpose within a template.\r\n\r\nEven though unconstrained for clinical content, specification of COMPOSITION.Encounter provides significant value by allowing for explicit querying of all Encounters within a patient record.\r\n\r\nThe Context component contains an optional 'Extension' SLOT that can be used in template design to:\r\n- add optional contextual information, such as episode information; or\r\n- allow for harmonisation or alignment with other model formalisms such as FHIR or CIMI, such as explicit representation of participants that are usually managed by the openEHR Reference Model in an openEHR archetype.\r\n\r\nTypical examples are a clinic visit, a nursing observation or a telemedicine consultation.(en)",
+        "misuse" : "*Not to be used to record details about an entire episode of care.\r\n\r\nNot to be used to carry persistent, summarised patient information, such as a problem list or medication summary.\r\n\r\nNot to be used to represent the report of a diagnostic service, such as imaging or laboratory testing.\r\n\r\nNot to be used to represent the FHIR resource of the same name - there is a mismatch scope and intent.(en)",
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "nb" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nb"
+        },
+        "purpose" : "For å registrere detaljer om en enkel interaksjon, kontakt eller omsorgshendelse mellom et individ og helsepersonell, der kontakten omhandler helsetjenester. Den kliniske kontakten kan være direkte ved ansikt-til-ansikt, indirekte via telefon eller videokonferanse, eller asynkron via elektronisk konsultasjon eller brev.",
+        "keywords" : [ "møte", "kontakt", "besøk", "visitt", "omsorgshendelse", "konsultasjon", "pasientkontakt", "time", "poliklinisk", "hendelse", "aktivitet", "e-konsultasjon", "elektronisk", "telemedisinsk" ],
+        "use" : "Brukes som en generisk container på dokument-nivå for å registrere detaljer om en enkel interaksjon, kontakt eller omsorgshendelse mellom et individ og helsepersonell. Den kliniske kontakten kan være direkte ved ansikt-til-ansikt, indirekte via telefon eller videokonferanse, eller asynkron via elektronisk konsultasjon eller brev. Modalitet kan registreres, om nødvendig, via referansemodell-attributten COMPOSITION/mode.\r\n\r\nInnholdskomponenten er bevisst latt være ubegrenset. Dette tillater bruk av enhver SECTION- og/eller ENTRY-arketype som er nødvendig/hensiktsmessig i templaten brukt i den aktuelle kliniske konteksten.\r\n\r\nTross ubegrenset plass for klinisk innhold, gir spesifikasjonen av COMPOSITION.encounter betydelig verdi ved å tillate eksplisitt spørring på alle kontakter innenfor en pasientjournal.\r\n\r\nKomponenten 'Context' har en valgfri utvidelse ('SLOT') som kan brukes ved design av templaten, for å:\r\n-legge til valgfri kontekstuell informasjon om, f.eks., episoden; eller\r\n-tillate harmonisering eller justering i forhold til andre informasjonsmodeller, f.eks. FHIR eller CIMI, som f.eks. eksplisitte representasjoner av 'Participants' som i en openEHR-arketype ordinært vil håndteres av openEHR-referansemodellen.\r\n\r\nTypiske eksempler kan være en poliklinikktime, en sykepleierobservasjon eller en telemedisinsk konsultasjon.",
+        "misuse" : "Brukes ikke til registrering av detaljer om et helt behandlingsforløp.\r\nBrukes ikke til å inneholde persistent, oppsummert informasjon om individet, som f.eks. problemliste eller medikamentliste.\r\nBrukes ikke som rapport fra en diagnostisk service, som billeddiagnostikk eller laboratorieprøve.\r\nBrukes ikke til å representere FHIR-ressursen av samme navn - disse har forskjellig omfang og bruksområde.",
+        "originalResourceUri" : { },
+        "otherDetails" : { }
       }
     }
   },
@@ -142,30 +220,7 @@
       "children" : [ {
         "@type" : "C_COMPLEX_OBJECT",
         "rmTypeName" : "EVENT_CONTEXT",
-        "attributes" : [ {
-          "@type" : "C_ATTRIBUTE",
-          "rmAttributeName" : "other_context",
-          "children" : [ {
-            "@type" : "C_COMPLEX_OBJECT",
-            "rmTypeName" : "ITEM_TREE",
-            "nodeId" : "at0001",
-            "attributes" : [ {
-              "@type" : "C_ATTRIBUTE",
-              "rmAttributeName" : "items",
-              "children" : [ {
-                "@type" : "C_ARCHETYPE_ROOT",
-                "rmTypeName" : "CLUSTER",
-                "occurrences" : "0..*",
-                "nodeId" : "at0002.1",
-                "attributes" : [ ],
-                "attributeTuples" : [ ],
-                "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-composition_context_detail-000.v1",
-                "referenceType" : "archetypeOverlay"
-              } ]
-            } ],
-            "attributeTuples" : [ ]
-          } ]
-        } ],
+        "attributes" : [ ],
         "attributeTuples" : [ ]
       } ]
     }, {
@@ -261,7 +316,12 @@
           "text" : "Medication Administration",
           "description" : "Interaktion, kontakt eller vårdhändelse mellan vårdtagare och vårdgivare inom hälso- och sjukvården."
         }
-      }
+      },
+      "de" : { },
+      "fi" : { },
+      "it" : { },
+      "fr" : { },
+      "nb" : { }
     },
     "termBindings" : { },
     "terminologyExtracts" : { },
@@ -275,108 +335,6 @@
   "templateId" : "OPENeP - Medication Administration",
   "otherMetaData" : { },
   "templateOverlays" : [ {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "df8b14b7-ecf2-3f06-aa55-19f334a82669",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : { },
-      "details" : {
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record common extended contextual details that apply to all COMPOSITION archetypes wthin a specific application or care setting",
-          "keywords" : [ "composition", "context" ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "sl" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sl"
-          },
-          "purpose" : "Za zapisovanje podatkov, ki se nanašajo na vse COMPOSITION archetypes",
-          "keywords" : [ "composition", "context", "vsebina" ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.composition_context_detail.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-composition_context_detail-000.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0001.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { },
-        "sl" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "51177d64-5dcb-362e-bfcd-a76850a10ba1",
-    "rmName" : "openehr",
-    "rmRelease" : "1.0.3",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sl"
-      },
-      "author" : {
-        "name" : "mag. Biljana Prinčič",
-        "organisation" : "Marand d.o.o., Ljubljana Slovenija",
-        "email" : "biljana.princic@marand.si"
-      },
-      "otherDetails" : { }
-    } ]
-  }, {
     "@type" : "TEMPLATE_OVERLAY",
     "uid" : "0033ab5c-cde0-4402-8b64-d30c188adf79",
     "description" : {
@@ -501,6 +459,51 @@
           "copyright" : "© openEHR Foundation",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung von Angaben über alle Aktivitäten, die im Zusammenhang mit der Planung, Vorbereitung, Rezeptbearbeitung, Ausgabe, Verabreichung, Absetzung und sonstigen Verwendung von Medikamenten, Impfungen, Nahrungsergänzungsmitteln oder anderen therapeutischen Mitteln stehen.",
+          "keywords" : [ "Arzneimittel", "Medikament", "verschreiben", "verordnen", "rezeptieren", "dosieren", "ausgeben", "Gabe", "Verabreichung", "Applikation", "Anwendung", "Medikation", "Beendigung", "Einstellen", "Absetzen", "Heilmittel", "therapeutisches Produkt", "Versorgung", "zubereiten", "Medizin", "Herstellung", "Präparat", "medizinisch", "medikamentös", "Verschreibung", "Rezept", "Impfstoff", "Impfung", "Dosierung", "Darreichungsform", "Applikationsform", "Applikationsart", "Verabreichungsweg", "Nachbeobachtung" ],
+          "use" : "Zur Darstellung von Informationen über Aktivitäten der Arzneimittelanwendung, einschließlich der Planung, Vorbereitung, Aussetzung, Absetzung und Beendigung von Arzneimittelverordnungen, sowie der aktuellen Verabreichung von Arzneimitteln. Die Erfassung der Daten bestimmter Aktivitäten erfolgt durch die im \"Pathway/Pfad\" des Archetyps definierten Arbeitsschritte. \r\n\r\nDieser Archetyp ist für alle Arten von Arzneimitteln und die damit verbundene Verordnung bestimmt, unabhängig davon, ob sie von einem Arzt verschrieben werden oder ob sie \"rezeptfrei\" gekauft werden. Der Anwendungsbereich dieses Arzneimittel-Archetyps umfasst auch die Anwendung von Impfungen, parenteralen Lösungen oder anderen therapeutischen Produkten, wie Verbänden, Nahrungsergänzungs- oder anderen Mitteln, die zum Erzeugen einer therapeutischen Wirkung angewandt oder verabreicht werden und ein gemeinsames Muster für die Datenerfassung haben. Im Zusammenhang mit einer Medikamenten- oder Impfliste wird dieser Archetyp zur Darstellung von verschriebenen oder verabreichten Arzneimitteln oder Impfungen verwendet. \r\n\r\nZusätzliche strukturierte und detaillierte Informationen über die Arzneimittel-Aktivität können über zweckgebundene Archetypen erfasst werden. Sie können in die SLOTs \"Arzneimitteldetails\", \"Dosis\", \"Lokalisation\", \"Verabreichungsmittel\" oder \"Zusätzliche Details\" eingefügt werden. \r\n\r\nZeitliche Abläufe im Zusammenhang mit der Arzneimittelanwendung könnten auf zwei Arten gehandhabt werden:\r\n- unter Verwendung des Referenzmodells - die Zeit der Ausführung eines beliebigen Prozessschrittes wird über die Verwendung des ACTION-Time-Attributs aufgezeichnet.\r\n- mit dem Archetyp-Datenelement - das Datenelement \"Ursprünglich geplantes Datum/Uhrzeit\" soll die Zeit erfassen, zu der das Arzneimittel zur Verabreichung bestimmt war. Hinweis: Das entsprechende Attribut \"ACTION-Time\" für den geplanten Prozessschritt erfasst die Zeit, zu der die klinische Aktivität in einem System terminiert wurde, nicht jedoch das beabsichtigte Datum/Uhrzeit, zu dem die Aktivität ausgeführt werden sollte.\r\n\r\nIn der Praxis werden einige Arzneimittel (z.B. bei Reanimation in der Notaufnahme) auf der Grundlage eines Protokolls oder einer mündlichen Anordnung verabreicht und nicht im Voraus verordnet. Die Details zu dem Arzneimittel werden zusammen mit dem Prozessschritt \"Dosis wurde verabreicht\" hinzugefügt. Für eine andauernde Arzneimittelbehandlung werden die Daten zum Arzneimittel zusammen mit dem Prozessschritt \"Dosis wurde verabreicht\" bei jeder Verabreichung erfasst. Die Verordnung bleibt dabei beim Status \"Aktiv\". Wenn das letzte Ereignis vermerkt wird, wird der Prozessschritt \"Arzneimittelbehandlung ist abgeschlossen\" erfasst. Die Verordnung des Arzneimittels erhält nun den Status \"abgeschlossen\".\r\n\r\nIn anderen Situationen, wie z.B. in der Sekundärversorgung, kann es eine formale Verordnung für ein Arzneimittel mit einem entsprechenden Archetyp INSTRUCTION.medication_order geben. Dieser ACTION-Archetyp wird dann zur Darstellung des Workflows, also wann und wie die Verordnung ausgeführt wurde, verwendet. \r\n\r\nDie Darstellung von Informationen mit diesem ACTION-Archetyp zeigt an, dass eine bestimmte Aktivität tatsächlich stattgefunden hat; dies ist in den meisten Fällen die Verabreichung eines Arzneimittels, kann aber auch ein verzögerter Bereitstellungsversuch oder eine andere Aktivität sein, wie z.B. das Aussetzen einer Medikamentengabe zur Vorbereitung auf eine Operation. Gibt es eine offizielle Verordnung des Arzneimittels, wird der Status dieser Verordnung durch den Prozessschritt repräsentiert, in welchem die Daten registriert werden. Mit diesem Archetyp kann beispielsweise der weitere Verlauf einer Paracetamol-Verordnung in den EHR Prozessschritten dargestellt werden. Das Datenelement \"Begründung\" wird dabei verwendet, um den Grund zu dokumentieren, warum dieser Prozessschritt, z.B. das Weglassen einer Dosis oder das Einstellen einer Arzneimittelgabe, vorgenommen wurde. \r\n\r\nWird dieser ACTION-Archetyp mit dem entsprechenden Archetyp INSTRUCTION.medication_order verwendet, werden die Informationen, die sich nicht von der Verordnung- zur Anwendungsaktivität geändert haben, in der Aktion im Allgemeinen nicht wiederholt. Es wird als gute Praxis angesehen, obwohl dies nicht obligatorisch ist, das Arzneimittel in der AKTION aufzuzeichnen.\r\n\r\nDie Prozessschritte unterscheiden sich zwischen denen, die sich direkt auf die Erfüllung der Verordnung beziehen, wie Autorisierung, Zubereitung und Verabreichung der Dosis, und denen, die sich auf die Handhabung des Rezeptes beziehen, wie Ausstellung, erneute Autorisierung und Abgabe. In einigen Ländern wird das als ein Prozessschritt angesehen. In anderen wird es als hilfreich erachtet, die Erfüllung der Verordnung und die Handhabung des Rezeptes in separaten Templates darzustellen.\r\n\r\nDie meisten Namen der Prozessschritte dieses Archetyps enthalten die Namen \"Arzneimittel\" oder \"Rezept\" bzw. \"Verordnung\". Dies soll die Unterscheidung der einzelnen Prozessschritte erleichtern. \r\n\r\nIn einigen Ländern kann ein Rezept erneut genehmigt werden, um eine laufende Medikamentenverordnung fortzusetzen, während in anderen Ländern unter diesen Umständen ein völlig neues Rezept ausgestellt werden muss. In letzterem Fall ist der Prozessschritt \"Rezept ist re-autorisiert\" nicht anwendbar.",
+          "misuse" : "Nicht zur Repräsentation eines Arzneimittelrezeptes oder Verordnung verwenden. Für diesen Zweck muss der Archetyp INSTRUCTION.medication_order eingesetzt werden.\r\n\r\nNicht zur Repräsentation der Verabreichung oder Abgabe von Blutprodukten verwenden. Sie haben meist einen vollkommen anderen klinischen Ablauf und erfordern meist andere unterstützende Informationen. Ein anderer geeigneter ACTION-Archetyp muss für diesen Zweck verwendet werden.\r\n\r\nNicht zur Darstellung von Details über die Compliance/Therapietreue, Nebenwirkungen oder Toxizität verwenden. Für diesen Zweck muss ein anderer Archetyp verwendet werden.\r\n\r\nNicht für den Medikamentenabgleich verwenden. Für diesen Zweck muss der passende Archetyp verwendet werden. \r\n\r\nNicht für eine formelle Überprüfung einer ganzen Medikamentenliste, z.B. durch einen Apotheker, verwenden. Für diesen Zweck müssen andere geeignete Archetypen verwendet werden.\r\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "För registrering av detaljer om aktiviteter som är relaterade till planering, schemaläggning, recepthantering, utdelning, administrering, upphörande och annan användning av läkemedel, vaccin, näringsprodukt eller annan behandlings produkt.",
+          "keywords" : [ "medicinering", "förskrivning", "fördela", "administrering", "upphörande", "bra behandling", "tillförsel", "medicin", "läkemedel", "förberedelse", "medicinsk", "recept", "vaccin", "vaccination", "dosering", "form", "rutt", "uppföljning" ],
+          "use" : "Används för att registrera information om de aktiviteter som krävs för att stödja alla aspekter av läkemedelshantering inklusive planering, schemaläggning, avbrott, avbokning, slutförande av läkemedelsbeställningar och den faktiska administreringen av läkemedelsföremål. Detta görs genom att registrera data för specifika aktiviteter, som definieras av \"Pathway\" -flödesstegen i denna arketyp.\r\n\r\nArketypen är avsedd för att användas för alla typer av medicineringar och relaterade beställningar, oavsett om det ordinerats av en vårdpersonal eller är receptfri. I skopet inkluderar också beställningar på vaccinationer, parenterala vätskor eller andra behandlings produkter, såsom bandage, näringsprodukter eller andra föremål som appliceras eller administreras för att ha en behandlingseffekts. Något gemensamt mellan de är att alla har samma dataregistrerings pattern/mönster. Denna arketyp kommer att användas för bara registrering av medicinering eller vaccination som har ordinerats eller administrerats i en läkemedels- eller vaccinationslista.\r\n\r\nYtterligare strukturerad och detaljerad information om aktiviteten kan fångas med hjälp av målbaserade och specifika arketyper infogade i '' Preparations details '', '' Amount'', 'Structured body site', 'Administration device' eller 'Additional details' SLOTs.\r\n\r\nTider relaterade till läkemedelshantering kan hanteras på ett av två sätten:\r\n- Använda Referensmodellen -för att registrera tiden för att utföra alla steg, använd attributet ACTION time \r\n- Archetyped data element - dataelementet \"Original schemalagt datum / tid\" är avsett att registrera den tid då läkemedelsartikeln var avsedd att administreras. Notera! Motsvarande ACTION-tidsattribut för den schemalagda steget registrerar den tid då den kliniska aktiviteten planerades i ett system, det beskriver inte det bestämda datumet / tiden när aktiviteten är avsedd att utföras.\r\n\r\nI praktiken kommer vissa läkemedel (till exempel vid återupplivning på akutmottagningen) att administreras baserad på protokoll eller en muntlig ordination. Det kommer inte att beställas i förväg. Läkemedlets detaljer kommer att läggas till i steget: \"Dos administrerad\". För en pågående medicinering kommer data om läkemedelsartikeln att registreras i steget \"Dos administrerad\", man behöver lämna instruktionen i aktivt tillstånd tills medicineringen är klar. När den sista händelsen registreras och information om sista steget \"Läkemedelsprocess slutförd\" är klarregistrerad då visas \"status klar\" för ordinationen.\r\n\r\nI andra situationer, till exempel sekundärvård, kan det finnas en formell beställning av ett läkemedels artikel med en motsvarande INSTRUKTION.medicin_order-arketyp. Denna ACTION-arketyp kan sedan användas för att registrera arbetsflödet för tid, datum och hur ordinationen har genomförts. \r\n\r\nDet kan vara så att leverantören har inte hunnit med leverans av läkemedlet i tid eller annan aktivitet orsakat så att förberedelse av läkemedels artikel har avbrutits. Om det finns en formell beställning för läkemedelsartikeln, administreras detta i själva processen för förberedelse av medicinska artikel, \r\nOm det finns en formell beställning för en läkemedelsartikel kommer statusbeskrivning av denna artikel presenteras i steget där data är registrerad. \r\n\r\nExempelvis, Med hjälp av denna arketyp kan det fortskridande tillståndet för en Paracetamol beställning registreras. detta görs genom att det separata poster i EHR-framstegsnoterna vid varje \"Pathway\" -steg. När man dokumenterar anledningen till varför en aktivitet utfördes eller ett vägsteg valdes.\r\nElementet \"orsak\" används för att registrera anledningen till varför en aktivitet upphördes eller ett vägsteg valdes, till exempel varför en dos utelämnades eller en nedicineringen upphörde.\r\n\r\nAnvändning av ACTION-arketyp samt INSTRUCTION.medication_order-arketyp gör så att oförändrade information från ordningen till hanteringsaktiviteten i ACTION inte upprepas. Det anses vara bra praxis, men inte obligatoriskt, att registrera läkemedelsartikeln i HANDLINGEN.\r\n\r\nVägstegen skapar skillnader mellan de som direkt relatera sig till uppfyllandet av beställningen, såsom auktorisering, beredning och dosadministration, och de som avser hantering av receptet såsom utfärdande, om identifiering och utdelning. I vissa jurisdiktioner betraktas dessa som en enda väg, i andra kan det vara till hjälp att hantera beställning och recept i separata mallar.\r\n\r\nNamnen på de flesta vägstegen i den här arketypen börjar med antingen \"Medicinering\" eller \"Recept\". Detta för att göra det lättare att skilja mellan de vägsteg som är relaterade till recepthantering och de som är associerade med hanteringen av själva läkemedelsbeställningen.\r\n\r\nI vissa jurisdiktioner kan ett recept godkännas på nytt, detta för att kunna fortsätta med en pågående läkemedelsbeställning, medan i andra måste ett helt nytt recept utfärdas under dessa omständigheter. I det sistnämnda gäller inte vägsteget \"Receptbeläggning på nytt\".\r\n",
+          "misuse" : "Får inte användas för att registrera en läkemedelsordination eller instruktion. Använd arketypen INSTRUCTION.medication_order för detta ändamål.\r\n\r\nAnvänds inte arketypen för att registrera administrering eller dosering av blodprodukter, vilket innebär en helt annan klinisk process och sannolikt kommer att kräva annan stödjande information. Använd en annan lämplig ACTION-arketyp för detta ändamål.\r\n\r\nFår inte användas för registrering av detaljer om efterlevnadsbehandling, sekundära effekter eller toxicitet. Använd andra arketyper för dessa ändamål.\r\n\r\nFår inte användas för avstämning av läkemedel. Använd andra lämpliga arketyper för detta ändamål.\r\n\r\nFår inte användas för en formell granskning av en hel läkemedelslista, till exempel av en apotekare. Använd andra lämpliga arketyper för detta ändamål.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "zh-cn" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "zh-cn"
+          },
+          "purpose" : "用于记录关于任何与药物、疫苗、营养产品/制品或其他治疗类制剂（therapeutic item）的计划[编制]、排程/安排、处方管理、配发、施用/给药、停止/停用和其他使用情况相关的活动的详情。",
+          "keywords" : [ "药物", "药物治疗", "用药", "开立处方", "开具处方", "开处方", "配发", "调剂和发放", "施用", "给药", "停止", "停止施用", "停用", "治疗类产品", "供应", "供给", "药品", "药用", "医药", "处方", "疫苗", "疫苗接种", "接种疫苗", "免疫接种", "免疫", "剂量", "剂量药物", "剂型", "形式", "途径", "给药途径", "用药途径", "随访", "跟踪" ],
+          "use" : "用于记录关于那些支持药物管理各个方面时所需活动的信息，而这些活动包括药物医嘱的计划[编制]、排程/安排、暂停、取消和完成，以及具体药物的实际施用/给药。方法就是按照本原始型之中的“路径”照护服务流程步骤的定义，来记录针对种种具体活动的数据。\r\n\r\n本原始型旨在用于任何类型的药物医嘱和相关医嘱，无论是健康专业人员的处方所开具的药物还是可在“药房柜台”购买的非处方药。这一药物原始型的范围还包括关于疫苗接种、注射液或其他治疗类制剂/产品的医嘱。例如，绷带、营养产品/制品或其他应用或施用起来具有治疗效果的产品/制品/制剂；而且，此类的产品/制品/制剂在数据记录方面有着共同的模式。在药物或疫苗接种清单的背景下，本原始型将仅仅用于记录处方已开具或已施用的药物或疫苗[接种]。\r\n\r\n如果需要，可以利用插入到“制剂详情”（Preparations details）、“数量”（Amount）、“结构化身体部位”（Structured body site）、“施用/给药设备”（Administration device）或“其他详情”（Additional details）槽位（SLOT）之中针对具体目的的原始型，来采集关于相应活动的其他结构化详情。\r\n\r\n可以采用下列两种方式之一来管理与药物管理相关的时间特征（时机安排）信息：\r\n- 利用参考模型 - 任何路径步骤的执行时间将采用的是每个步骤的行动（ACTION）时间属性。\r\n- 原始型数据元 - “原始预定日期/时间”（Original scheduled date/time）数据元旨在记录预定/打算施用相应药物的时间。注意：已排程/安排计划（Scheduled）路径步骤的相应行动（ACTION）时间属性将记录的是将相应的临床活动排程/安排到系统当中的时间，而不是预定/打算开展相应活动的预定日期/时间。\r\n\r\n在实际工作中，一些药物（如急诊科复苏期间的用药）将根据特定的诊疗方案或口头医嘱来进行施用/给药，而不是提前开立医嘱。将会针对路径步骤“施用/给药剂量”（Dose administered），来添加关于药物的详情。对于正在进行之中的药物治疗过程，将会针对每次施用/给药时的步骤“施用/给药剂量”（Dose administered），来记录关于相应具体药物的数据，并使相应的医嘱指令保持有效状态。当记录最后一次施用/给药的情况时，将记录的步骤是“已完成的药物治疗过程”（Medication course completed），表明该医嘱现在处于已完成的状态。\r\n\r\n在其他的情况下，如二级照护服务/医疗护理服务，则可能存在针对相应具体药物的正式医嘱，而此类的医嘱采用的是相应的药物医嘱原始型 INSTRUCTION.medication_order。这样，就可以利用当前的行动（ACTION）原始型来记录关于何时以及如何执行该医嘱的工作流。\r\n\r\n采用当前这一行动（ACTION）原始型来记录信息表明，实际上已经发生了某种活动；此类活动最为常见的就是相应具体药物本身的施用/给药，但也可能是延迟供应的尝试，或者是其他活动，如为准备某项操作而暂停相应的具体药物。如果相应具体的药物有正式的医嘱，则采用据以记录相应数据的路径步骤来表达该医嘱的状态。例如，可以采用这一原始型，利用每个“路径”步骤时EHR病程记录之中的不同条目，来记录对乙酰氨基酚（扑热息痛）医嘱的进展状态。\r\n在记录关于开展特定活动或选择特定路径步骤的原因时，如为何省略特定剂量的药物或停用相应的药物，则可以使用数据元“原因”（Reason）。\r\n\r\n当这一行动（ACTION）原始型与相应的药物医嘱原始型INSTRUCTION.medication_order 一起使用时，一般并不会在相应的动作之中重复从医嘱到管理活动并未发生变化的信息。在行动（ACTION）中记录相应的具体药物属于是一种很好的做法，虽然并非强制性的要求。\r\n\r\n路径步骤可以区分那些跟医嘱执行直接相关的步骤，如授权、准备和剂量施用，与那些跟处方处理相关的步骤，如签发、重新授权、配发。在某些司法管辖区域，会将这些步骤视为同一路径[的内容]，而在其他的司法管辖区域，可能会有所帮助的做法则是采用不同的模板来处理医嘱履行和处方。\r\n\r\n本原始型之中大多数路径步骤的名称均以“药物”或“处方”开头，以便更易于区分那些跟处方处理相关的路径步骤与那些跟处理药物医嘱本身相关的路径步骤【中文名称的情况可能并非如此】。\r\n\r\n在某些司法管辖区域，要继续沿用持续使用的药物医嘱，可以重新授权相应的处方，而在其他的司法管辖区域，在此类的情况下，则必须签发全新的处方。在后一种情况下，路径步骤“已重新授权的处方”（Prescription re-authorised）将不适用。",
+          "misuse" : "不得用于记录药物医嘱或说明。对于此类的用途，应当采用药物医嘱原始型INSTRUCTION.medication_order。\r\n\r\n不得用于记录血液制品的施用或配发，因为其涉及的是截然不同的临床过程，且很可能需要不同的支持信息。 对于此类的用途，应当采用合适的行动（ACTION）原始型。\r\n\r\n不得用于记录关于治疗依从性、继发反应或毒性的详情。对于此类的用途，应当采用其他的原始型。\r\n\r\n不得用于药物汇整/核对协调。对于此类的用途，应当采用其他合适的原始型。\r\n\r\n不得将其用于药师等对整个药物清单的正式审核。对于此类的用途，应当采用其他合适的原始型。",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
         }
       }
     },
@@ -515,6 +518,58 @@
       "rmTypeName" : "ACTION",
       "nodeId" : "at0000.1",
       "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "ism_transition",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ISM_TRANSITION",
+          "nodeId" : "at0145.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "current_state",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "openehr"
+                  },
+                  "constraint" : [ "526", "245" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          }, {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "careflow_step",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "at0145" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "description",
         "children" : [ {
@@ -538,45 +593,9 @@
                   "nodeId" : "at0141.1",
                   "attributes" : [ ],
                   "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_ARCHETYPE_ROOT",
-                  "rmTypeName" : "CLUSTER",
-                  "occurrences" : "0..*",
-                  "nodeId" : "at0144.1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ],
-                  "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-device-002.v1",
-                  "referenceType" : "archetypeOverlay"
                 } ]
               } ],
               "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0104.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-medication-003.v0",
-              "referenceType" : "archetypeOverlay"
-            }, {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0131.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-dosage-005.v1",
-              "referenceType" : "archetypeOverlay"
-            }, {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..*",
-              "nodeId" : "at0053.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-Medication_additional_details-006.v0",
-              "referenceType" : "archetypeOverlay"
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -594,7 +613,10 @@
         "ru" : { },
         "en" : { },
         "nb" : { },
-        "pt-br" : { }
+        "pt-br" : { },
+        "de" : { },
+        "sv" : { },
+        "zh-cn" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -692,255 +714,18 @@
         "email" : "biljana.princic@marand.si"
       },
       "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "dbd6f4b3-a3e6-41b1-a21e-3530ac1ca212",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : { },
-      "details" : {
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "*To record the details of a medical device used in the provision of healthcare.(en)",
-          "keywords" : [ "*device(en)", "*machine(en)", "*implant(en)", "*appliance(en)", "*catheter(en)", "*prosthesis(en)", "*aid(en)", "*biomedical(en)", "*instrument(en)", "*equipment(en)", "*meter(en)", "*monitor(en)", "*software(en)" ],
-          "use" : "*Use to record the details of a medical device used in the provision of healthcare.\r\n\r\nUse of the term 'medical device' varies depending on context. Within the Standards world, the term device tends to refer to mechanical or electronic devices that support healthcare and require rigorous documentation regarding location tracking, maintenance, calibration, software versions etc.  Within the terminology context the use of device is very broad, including any medical device that can be used in direct or indirect provision of clinical care, as long as it is does not act in a way that exerts a direct pharmacological, metabolic or  immunological effect.\r\n\r\nExamples of medical devices range from simple devices such as urinary catheters, tongue depressors, contact lenses, breast implants, plain dressings, joint prostheses, syringe drivers and spirometers through to advanced devices such as artificial hearts, mobile phone applications and computerised devices that capture point-of-care medical measurements. \r\n\r\nIn the complex situation where a surgically implanted device is used as the means to deliver therapeutic agents such as chemotherapy directly into the body, this archetype will be used to record only the details about the medical device itself and the order for medication and details about the actual administration of the therapeutic agent will be recorded using specific medication-related INSTRUCTION and ACTION archetypes.\r\n\r\nThis archetype is designed to provide the framework for structured representation of any medical device and the data elements that are contained here are not specific for any one type of device. Single use devices will commonly require data elements such as Lot Number and Date of Expiry. In contrast these are usually not relevant for durable devices which will often have a set of identifiers, including a UID, Serial Number, Model etc.\r\n\r\nFurther, different types of devices will require specific information relevant to their purpose. This data can be recorded using specific CLUSTER archetypes inserted into the 'Specific propserties' SLOT. For example: use of a urinary catheter may require additional details about the diameter and length of catheter, material composition, number of lumens etc.\r\n\r\nIf the medical device has a number of components that require recording of details, each individual component should be recorded explicitly by using an additional CLUSTER.device archetype inserted into the 'Components' SLOT.\r\n\r\nThe data field 'Software Version' allows for only a single version to be recorded. This is primarily applicable for a device which is a software application. If the device has multiple software or hardware components that need to be specified, this should be done by using an addition CLUSTER.device inserted into the 'Components' SLOT.\r\n\r\nTo record additional details for durable or persistent devices that relate to ownership, physical location tracking, maintenance schedules etc, use CLUSTER.device_details archetype inserted into the 'Asset management' SLOT in this archetype.(en)",
-          "misuse" : "*Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic direct effect. For example: a medicine impregnated dressing should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.(en)",
-          "copyright" : "© *© openEHR Foundation(en), openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "es-ar" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "es-ar"
-          },
-          "purpose" : "Registrar los detalles de un objeto físico, producto o dispositivo utilizado en el sentido mas amplio de la provisión de cuidados de la salud, pero no como medio terapéutico o metabólico.",
-          "keywords" : [ "dispositivo", "máquina", "implante", "cateter", "prótesis", "auxiliar", "biomédico", "instrumento", "equipamiento", "medidor", "monitor", "físico", "objeto" ],
-          "use" : "Utilizado para registrar los detalles de cualquier dispositivo genérico que puede ser utilizado directamente de un modo terapéutico o diagnóstico, o indirectamente como apoyo a la provisión de cuidados de la salud. El uso del término dispositivo varía dependiendo del contexto. En el mundo de los estándares, el término dispositivo tiende a referirse a dispositivos mecánicos o electrónicos que actuan como apoyo del cuidado de la salud y que requiren documentación rigurosa en cuanto a especificaciones, mantenimiento, etc. En el contexto de las terminologías, el uso de dispositivo es muy amplio, incluyendo a cualquier objeto físico que pueda ser utilizado directa o indirectamente en la provisión de cuidados clínicos. Los ejemplos incluyen ventiladores, medidores de flujo expiratorio máximo, espirómetros, lentes oculares y de contacto, catéteres endovasculares, implantes mamarios, prótesis, tubos de drenaje y anillos para callos. \r\nEste arquetipo esta diseñado para proveer la base de una representación estructurada de cualquier dispositivo, desde el simple ejemplo de una marca de tira reactiva urinaria con una fecha de vencimiento hasta un oído biónico implantable que puede requerir documentación compleja, software, hardware, mantenimiento, calibración, etc.\r\nPara los casos de uso habituales podría ser apropiada la especialización de este arquetipo para formas específicas (ej.: cateter endovascular o cateter urinario).",
-          "misuse" : "No debe ser utilizado para el registro de medicamentos, vacunas o similares, que se utizan como medios terapéuticos o metabólicos.",
-          "copyright" : "© *© openEHR Foundation(en), openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt-br" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-br"
-          },
-          "purpose" : "Para gravar os detalhes de um dispositivo médico usado na prestação de cuidados de saúde.",
-          "keywords" : [ "dispositivo", "máquina", "implante", "catéter", "prótese", "cuidado", "biomedical", "instrumento", "equipamento", "monitor", "software", "utensílio" ],
-          "use" : "Use para gravar os detalhes de um dispositivo médico utilizado na prestação de cuidados de saúde .\r\n\r\nO uso do termo \"dispositivo médico\" varia dependendo do contexto. No mundo dos padrões, o termo dispositivo tende a referir-se a dispositivos mecânicos ou eletrônicos que apoiam cuidados de saúde e exigem documentação rigorosa sobre rastreamento de localização, manutenção, calibração, versões de software etc. Dentro do contexto da terminologia o uso de dispositivo é muito amplo , incluindo qualquer dispositivo médico que pode ser utilizado direta ou indiretamente em cuidados clínicos , desde que não atue de forma que exerça uma ação farmacológica direta , metabólica ou como efeito imunológico .\r\n\r\nOs dispositivos médicos variam de dispositivos simples, como catéteres urinários, abaixadores de língua, lentes de contato, próteses articulares, os implantes mamários e curativos simples, até dispositivos avançados, como corações artificiais, espirômetros, além de aplicativos para celulares e dispositivos computadorizados que capturam medidas médicas.\r\n\r\nEm situações complexas, onde um dispositivo implantado cirurgicamente é usado para administrar agentes terapêuticos, tais como a quimioterapia, este arquétipo irá ser utilizado para gravar apenas os detalhes sobre o próprio dispositivo médico e a prescrição da medicação e detalhes sobre o administração real do agente terapêutico serão registrados utilizando-se a arquétipos INSTRUCTION e ACTION sobre a medicação específica.\r\n\r\nEste arquétipo é projetado para fornecer a estrutura para representação estruturada de qualquer dispositivo médico e os elementos de dados que estão contidos aqui não são específicos para algum tipo de dispositivo. Dispositivos de uso único comumente vão exigir elementos de dados, tais como número de lote e data de validade. Em contrapartida estes geralmente não são relevantes para dispositivos duráveis que, muitas vezes, têm um conjunto de identificadores, incluindo uma UID, número de série, modelo, etc..\r\n\r\nAlém disso, diferentes tipos de dispositivos exigirão informações específicas relevantes para a sua finalidade. Estes dados podem ser gravados utilizando-se arquétipos CLUSTER específico inseridos no SLOT das propriedades específicas. Por exemplo: utilização de um catéter urinário pode exigir detalhes adicionais sobre o diâmetro e o comprimento do catéter, composição do material, número de lúmens etc.\r\n\r\nSe o dispositivo médico tem um número de componentes que necessitem de gravação de dados, todos os componentes individuais deverão ser registrados explicitamente utilizando-se um arquétipo CLUSTER.device adicional introduzido nos campos dos componentes.\r\n\r\nO campo de dados versão do software permite apenas uma única versão a ser gravado. Isto é especialmente aplicável para um dispositivo que é uma aplicação de software. Se o dispositivo possui vários componentes de software ou hardware que precisam ser especificados, este deve ser feito por meio de um CLUSTER.device além de inserido no slot do 'Componentes'.\r\n\r\nPara gravar detalhes adicionais para dispositivos duráveis ou permanentes que se relacionam com a posse, rastreamento de localização física, programações de manutenção etc, o uso do arquétipo CLUSTER.device_details no slot \"A gestão de ativos\" desse arquétipo.\r\n\r\nEste arquétipo foi projetado para uso genérico com outros arquétipos que precisam descrever um dispositivo. Exemplos incluem: OBSERVATION.blood_pressure para o esfigmomanômetro; OBSERVATION.ecg para o equipamento de ECG; OBSERVATION.urinalysis para as tiras de reagente e o dispositivo usado para os testes; ACTION.procedure; e CLUSTER.exam_tympanic_membrane para detalhar o otoscópio usado.",
-          "misuse" : "Não deve ser utilizado para gravar dados sobre os medicamentos que exercem uma ação farmacológica direta , metabólica ou efeito imunológico. Por exemplo: um curativo impregnado que exige uma prescrição deve ser gravado utilizando-se o o arquétipo INSTRUCTION.medication_order, com foco em ingredientes ativos, dosagem, etc.",
-          "copyright" : "© *© openEHR Foundation(en), openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "ar-sy" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "ar-sy"
-          },
-          "purpose" : "لتسجيل التفاصيل حول شيئ محسوس, مُنتَج أو جهيزة يتم استخدامها في أوسع وصف لتقديم الخدمة الصحية, و لكن دون طريقة أيضية أو علاجية مباشِرة.",
-          "keywords" : [ "الجهيزة", "الآلة", "الطُّعم", "جهاز مساعد", "القثطار", "البِدْلة", "مساعدة", "طبي بيولوجي", "أداة", "المعدات", "مقياس", "مِرْقب", "بدني/محسوس", "شيئ" ],
-          "use" : "يستخدم لتسجيل التفاصيل حول أي جهيزة جنيسة (غير محدودة الملكية) و التي يمكن أن تستخدم إما مباشرةً بطريقة علاجية أو تشخيصية أو تستخدم بشكل غير مباشر لدعم تقديم الخدمة الصحية.\r\nو يختلف استخدام اللفظ (جهيزة) على حسب السياق. \r\nو في داخل عالم المعايير, فإن اللفظ (جهيزة) يميل إلى الإشارة إلى الجهائز الإلكترونية أو الميكانيكية/الحركية و التي تدعم الرعاية الصحية, و تتطلب توثيق مكثف فيما يتعلق بالمواصفات و الصيانة... إلى آخره.\r\nو في سياق عالم المصطلحات فإن استخدام (جهيزة) واسع جدا, بما في ذلك أي شيئ محسوس يمكن استخدامه في تقديم الرعاية الصحية إما بشكل مباشر أو غير مباشر. \r\nو تتضمن الأمثلة: دوائر أجهزة التنفس الصناعي, مقاييس الجريان القِمِّي, مقاييس التنفس, نظارات العين, العدسات اللاصقة, القثطار داخل الوريد, طُعوم الثدي, البِدْلات, أنابيب المَنْزَح, و الحلقات المسمارية.\r\n\r\nو تم تصميم هذا النموذج ليمثل الأساس لعرض مركب لأي جهيزة, من مثال بسيط لنوع من غميسة البول مع تاريخ الاستخدام, إلى طعم أذن من كائن حيّ و الذي يتطلب توثيق مركب مثل البرنامج الإلكتروني, و الأجزاء الصلبة, و الصيانة و التعيير, إلى آخره.\r\n\r\nو بالنسبة لحالات الاستخدام المعتادة, فقد يكون من المناسب تخصيص هذا النموذج خاصة في القثطار داخل الوريد أو القثطار البولي.",
-          "misuse" : "لا يستخدم لتسجيل المنتجات, مثل الأدوية أو التطعيمات أو ما شابه, و التي تستخدم لأغراض علاجية أو أيضية",
-          "copyright" : "© *© openEHR Foundation(en), openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record the details of a medical device used in the provision of healthcare.",
-          "keywords" : [ "device", "machine", "implant", "appliance", "catheter", "prosthesis", "aid", "biomedical", "instrument", "equipment", "meter", "monitor", "software" ],
-          "use" : "Use to record the details of a medical device used in the provision of healthcare.\r\n\r\nUse of the term 'medical device' varies depending on context. Within the Standards world, the term device tends to refer to mechanical or electronic devices that support healthcare and require rigorous documentation regarding location tracking, maintenance, calibration, software versions etc.  Within the terminology context the use of device is very broad, including any medical device that can be used in direct or indirect provision of clinical care, as long as it does not act in a way that exerts a direct pharmacological, metabolic or  immunological effect.\r\n\r\nExamples of medical devices range from simple devices such as urinary catheters, tongue depressors, contact lenses, artificial joint implants, breast implants and plain dressings through to advanced devices such as artificial hearts, syringe drivers, spirometers, mobile phone applications and computerised devices that capture point-of-care medical measurements. \r\n\r\nIn the complex situation where a surgically implanted device is used as the means to deliver therapeutic agents such as chemotherapy directly into the body, this archetype will be used to record only the details about the medical device itself and the order for medication and details about the actual administration of the therapeutic agent will be recorded using specific medication-related INSTRUCTION and ACTION archetypes.\r\n\r\nThis archetype is designed to provide the framework for structured representation of any medical device and the data elements that are contained here are not specific for any one type of device. Single use devices will commonly require data elements such as Lot Number and Date of Expiry. In contrast these are usually not relevant for durable devices which will often have a set of identifiers, including a UID, Serial Number, Model etc.\r\n\r\nFurther, different types of devices will require specific information relevant to their purpose. This data can be recorded using specific CLUSTER archetypes inserted into the 'Specific properties' SLOT. For example: use of a urinary catheter may require additional details about the diameter and length of catheter, material composition, number of lumens etc.\r\n\r\nIf the medical device has a number of components that require recording of details, each individual component should be recorded explicitly by using an additional CLUSTER.device archetype inserted into the 'Components' SLOT.\r\n\r\nThe data field 'Software Version' allows for only a single version to be recorded. This is primarily applicable for a device which is a software application. If the device has multiple software or hardware components that need to be specified, this should be done by using an addition CLUSTER.device inserted into the 'Components' SLOT.\r\n\r\nTo record additional details for durable or persistent devices that relate to ownership, physical location tracking, maintenance schedules etc, use CLUSTER.device_details archetype inserted into the 'Asset management' SLOT in this archetype.\r\n\r\nThis archetype has been designed for generic use within other archetypes that need to describe a device. Examples include: OBSERVATION.blood_pressure for the sphygmomanometer; OBSERVATION.ecg for the ECG machine; OBSERVATION.urinalysis for the reactent strips and the device used for testing; ACTION.procedure; and CLUSTER.exam_tympanic_membrane to detail the otoscope used.",
-          "misuse" : "Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic effect. For example: a medicine impregnated dressing that requires a prescription should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.device.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-device-002.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0002.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0021.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0004.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0005.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0020.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0022.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0023.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0006.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0025.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0007.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0024.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0008.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "ar-sy" : { },
-        "en" : { },
-        "es-ar" : { },
-        "pt-br" : { },
-        "nb" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "2a8b319e-fe20-490b-9b6e-728c0f87858e",
-    "rmName" : "openehr",
-    "rmRelease" : "1.0.3",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "es-ar"
-      },
-      "author" : {
-        "name" : "Alan March",
-        "organisation" : "Hospital Universitario Austral, Buenos Aires, Argentina",
-        "email" : "amarch@cas.austral.edu.ar"
-      },
-      "accreditation" : "MD",
-      "otherDetails" : { }
     }, {
       "@type" : "TRANSLATION_DETAILS",
       "language" : {
         "terminologyId" : {
           "value" : "ISO_639-1"
         },
-        "codeString" : "nb"
+        "codeString" : "de"
       },
       "author" : {
-        "name" : "Lars Bitsch-Larsen",
-        "organisation" : "Haukeland University Hospital",
-        "email" : "lbla@helse-bergen.no"
+        "name" : "Ramona Wellmann, Natalia Strauch",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "strauch.natalia@mh-hannover.de, Strauch.Natalia@mh-hannover.de"
       },
       "otherDetails" : { }
     }, {
@@ -949,13 +734,14 @@
         "terminologyId" : {
           "value" : "ISO_639-1"
         },
-        "codeString" : "pt-br"
+        "codeString" : "sv"
       },
       "author" : {
-        "name" : "Osmeire Chamelette Sanzovo",
-        "organisation" : "Hospital Sírio Libanês - SP",
-        "email" : "osmeire.acsanzovo@hsl.org.br"
+        "name" : "Elham Gholami",
+        "organisation" : "SLL",
+        "email" : "elham.gholami@sll.se"
       },
+      "accreditation" : "Ackreditering",
       "otherDetails" : { }
     }, {
       "@type" : "TRANSLATION_DETAILS",
@@ -963,1251 +749,14 @@
         "terminologyId" : {
           "value" : "ISO_639-1"
         },
-        "codeString" : "ar-sy"
+        "codeString" : "zh-cn"
       },
       "author" : {
-        "name" : "Mona Saleh"
+        "name" : "Lin Zhang",
+        "organisation" : "Taikang Insurance Group",
+        "email" : "linforest@163.com"
       },
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "0a59f593-d34c-4e13-8a74-0237c8ec5b1d",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : { },
-      "details" : {
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å registrere detaljer om et legemiddel eller en komponent av et legemiddel, inkludert detaljer om spesifikke bestanddeler.",
-          "keywords" : [ "legemiddel", "tilbereding", "ordinering", "forskrive", "terapi", "substans", "medikament", "terapeutisk", "medikamenter solgt over disk", "vare", "ad-hoc", "magistrell", "ex tempore", "blanding", "virkestoff", "hjelpestoff", "OTC", "utblanding" ],
-          "use" : "Brukes for å registrere detaljer om et legemiddel eller en komponent av et legemiddel, inkludert detaljer om spesifikke bestanddeler.\r\n\r\nBrukes for å registrere detaljer tilberedningen av et legemiddel/preparat en legemiddelordinering (INSTRUCTION.medication) som inneholder forskriverens hensikt med ordineringen, eller i en legemiddelhandling (ACTION.medication) som dokumenterer hvilket preparatet som faktisk ble administrert, utdelt eller ekspedert.\r\n\r\nDe fleste ordineringer trenger ikke denne arketypen. For generiske ordineringer vil det spesifikke produktet bestemmes av de lokale legemiddelavtalene eller varene apoteket har tilgjengelig. Der det ordineres et produkt, vil legemiddelnavnet inneholde detaljer om form og styrke av produktet.",
-          "misuse" : "Brukes ikke for å få oversikt over varelageret på et apotek.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt"
-          },
-          "purpose" : "Para registrar detalhes de uma preparação de medicamentos, incluindo, quando necessário, detalhes de múltiplos ingredientes, no contexto de uma infusão ou preparação ad-hoc (manipulada). A maioria das prescrições baseadas em dose terá sua precisa preparação determinada pelo estoque disponível na unidade, ou pelo fornecimento de farmácia, enquanto que, com a prescrição baseada em produtos, o nome da medicação traz detalhes da forma e concentração da preparação.",
-          "keywords" : [ "medicação", "ordem", "prescrever", "terapia", "substância", "droga", "terapêutico", "venda livre", "ítem terapêutico", "Ad hoc", "manipulados" ],
-          "use" : "Para registrar os detalhes da preparação de um medicamento prescrito na INSTRUCTION de medicamentos, obedecendo a intenção do prescritor, no momento da execução da prescrição registrada pela ACTION de medicamentos, anotando a preparação efetivamente fornecida.",
-          "misuse" : "Utilização em controle de estoque de farmácias está fora do escopo deste arquétipo.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record details about a medication or component of a medication, including details of any specific constituents.",
-          "keywords" : [ "medication", "order", "prescribe", "therapy", "substance", "drug", "therapeutic", "therapeutic good", "ad-hoc", "adhoc", "ad hoc", "extemporaneous" ],
-          "use" : "Use for recording details about a medication or component of a medication, including details of any specific constituents.\r\n\r\nThis archetype is intended to be used to record details of a medication or medication product, in the context of either the medication to be administered/dispensed in a medication order (INSTRUCTION.medication_order), or the medication that was actually administered/dispensed (ACTION.medication).\r\n\r\nWhen used in the context of ordering a medication via prescription, this archetype may not be required. If identification of the medication item being ordered uses a terminology, then the brand/product name may also identify the form and strength of the substance. This archetype is intended to be used in settings where the form and detailed ingredients of the medication need to be specified in more detail.",
-          "misuse" : "This archetype is not intended to be used for pharmacy stock-control or within medication catalogues.\r\n\r\nNot to be used to record the intended or administered dose of a medication. Use either the INSTRUCTION.medication_order or the CLUSTER.dosage archetypes for this purpose.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.medication.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-medication-003.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..0",
-          "nodeId" : "at0152.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0115.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_QUANTITY",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "property",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "terminologyId" : {
-                    "value" : "openehr"
-                  },
-                  "constraint" : [ "119" ]
-                } ]
-              } ],
-              "attributeTuples" : [ {
-                "@type" : "C_ATTRIBUTE_TUPLE",
-                "members" : [ ],
-                "tuples" : [ ]
-              } ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0151.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0150.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_IDENTIFIER",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0003.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0148.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_QUANTITY",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "property",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "terminologyId" : {
-                    "value" : "openehr"
-                  },
-                  "constraint" : [ "380" ]
-                } ]
-              } ],
-              "attributeTuples" : [ {
-                "@type" : "C_ATTRIBUTE_TUPLE",
-                "members" : [ {
-                  "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "magnitude",
-                  "children" : [ ]
-                }, {
-                  "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "units",
-                  "children" : [ ]
-                } ],
-                "tuples" : [ {
-                  "@type" : "C_PRIMITIVE_TUPLE",
-                  "members" : [ {
-                    "@type" : "C_REAL",
-                    "constraint" : [ {
-                      "lower" : 0.0,
-                      "lowerIncluded" : true,
-                      "upperIncluded" : false,
-                      "lowerUnbounded" : false,
-                      "upperUnbounded" : true
-                    } ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "constraint" : [ "1" ]
-                  } ]
-                } ]
-              } ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0007.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0127.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "CODE_PHRASE",
-                  "occurrences" : "1..1",
-                  "terminologyId" : {
-                    "value" : "local"
-                  },
-                  "constraint" : [ "at0080", "at0083", "at0084" ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0133.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_ARCHETYPE_ROOT",
-          "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..*",
-          "nodeId" : "at0138.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-medication-004.v0",
-          "referenceType" : "archetypeOverlay"
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { },
-        "nb" : { },
-        "pt" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "68b562d9-76c2-4b27-9abd-faa452ee4580",
-    "rmName" : "openehr",
-    "rmRelease" : "1.0.3",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "John Tore Valand, Gro Hilde Ulriksen, Line Silsand, Silje Ljosland Bakke",
-        "organisation" : "Helse Bergen Hospital Trust, Norwegian Centre for E-health Research, Nasjonal IKT HF"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt"
-      },
-      "author" : {
-        "name" : "Beatriz de Faria Leao",
-        "organisation" : "Bleao Informática em Saúde",
-        "email" : "bfleao@terra.com.br"
-      },
-      "accreditation" : "MD, PhD",
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "0a59f593-d34c-4e13-8a74-0237c8ec5b1d",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : { },
-      "details" : {
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å registrere detaljer om et legemiddel eller en komponent av et legemiddel, inkludert detaljer om spesifikke bestanddeler.",
-          "keywords" : [ "legemiddel", "tilbereding", "ordinering", "forskrive", "terapi", "substans", "medikament", "terapeutisk", "medikamenter solgt over disk", "vare", "ad-hoc", "magistrell", "ex tempore", "blanding", "virkestoff", "hjelpestoff", "OTC", "utblanding" ],
-          "use" : "Brukes for å registrere detaljer om et legemiddel eller en komponent av et legemiddel, inkludert detaljer om spesifikke bestanddeler.\r\n\r\nBrukes for å registrere detaljer tilberedningen av et legemiddel/preparat en legemiddelordinering (INSTRUCTION.medication) som inneholder forskriverens hensikt med ordineringen, eller i en legemiddelhandling (ACTION.medication) som dokumenterer hvilket preparatet som faktisk ble administrert, utdelt eller ekspedert.\r\n\r\nDe fleste ordineringer trenger ikke denne arketypen. For generiske ordineringer vil det spesifikke produktet bestemmes av de lokale legemiddelavtalene eller varene apoteket har tilgjengelig. Der det ordineres et produkt, vil legemiddelnavnet inneholde detaljer om form og styrke av produktet.",
-          "misuse" : "Brukes ikke for å få oversikt over varelageret på et apotek.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt"
-          },
-          "purpose" : "Para registrar detalhes de uma preparação de medicamentos, incluindo, quando necessário, detalhes de múltiplos ingredientes, no contexto de uma infusão ou preparação ad-hoc (manipulada). A maioria das prescrições baseadas em dose terá sua precisa preparação determinada pelo estoque disponível na unidade, ou pelo fornecimento de farmácia, enquanto que, com a prescrição baseada em produtos, o nome da medicação traz detalhes da forma e concentração da preparação.",
-          "keywords" : [ "medicação", "ordem", "prescrever", "terapia", "substância", "droga", "terapêutico", "venda livre", "ítem terapêutico", "Ad hoc", "manipulados" ],
-          "use" : "Para registrar os detalhes da preparação de um medicamento prescrito na INSTRUCTION de medicamentos, obedecendo a intenção do prescritor, no momento da execução da prescrição registrada pela ACTION de medicamentos, anotando a preparação efetivamente fornecida.",
-          "misuse" : "Utilização em controle de estoque de farmácias está fora do escopo deste arquétipo.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record details about a medication or component of a medication, including details of any specific constituents.",
-          "keywords" : [ "medication", "order", "prescribe", "therapy", "substance", "drug", "therapeutic", "therapeutic good", "ad-hoc", "adhoc", "ad hoc", "extemporaneous" ],
-          "use" : "Use for recording details about a medication or component of a medication, including details of any specific constituents.\r\n\r\nThis archetype is intended to be used to record details of a medication or medication product, in the context of either the medication to be administered/dispensed in a medication order (INSTRUCTION.medication_order), or the medication that was actually administered/dispensed (ACTION.medication).\r\n\r\nWhen used in the context of ordering a medication via prescription, this archetype may not be required. If identification of the medication item being ordered uses a terminology, then the brand/product name may also identify the form and strength of the substance. This archetype is intended to be used in settings where the form and detailed ingredients of the medication need to be specified in more detail.",
-          "misuse" : "This archetype is not intended to be used for pharmacy stock-control or within medication catalogues.\r\n\r\nNot to be used to record the intended or administered dose of a medication. Use either the INSTRUCTION.medication_order or the CLUSTER.dosage archetypes for this purpose.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.medication.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-medication-004.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0142.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "CODE_PHRASE",
-                  "occurrences" : "1..1",
-                  "terminologyId" : {
-                    "value" : "local"
-                  },
-                  "constraint" : [ "at0143", "at0146", "at0144", "at0145", "at0001" ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..0",
-          "nodeId" : "at0152.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0115.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_QUANTITY",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "property",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "terminologyId" : {
-                    "value" : "openehr"
-                  },
-                  "constraint" : [ "119" ]
-                } ]
-              } ],
-              "attributeTuples" : [ {
-                "@type" : "C_ATTRIBUTE_TUPLE",
-                "members" : [ ],
-                "tuples" : [ ]
-              } ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0151.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0150.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_IDENTIFIER",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0003.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0133.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { },
-        "nb" : { },
-        "pt" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "68b562d9-76c2-4b27-9abd-faa452ee4580",
-    "rmName" : "openehr",
-    "rmRelease" : "1.0.3",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "John Tore Valand, Gro Hilde Ulriksen, Line Silsand, Silje Ljosland Bakke",
-        "organisation" : "Helse Bergen Hospital Trust, Norwegian Centre for E-health Research, Nasjonal IKT HF"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt"
-      },
-      "author" : {
-        "name" : "Beatriz de Faria Leao",
-        "organisation" : "Bleao Informática em Saúde",
-        "email" : "bfleao@terra.com.br"
-      },
-      "accreditation" : "MD, PhD",
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "ac331b21-71f6-4ae5-950a-1a8d78c9f0c4",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : { },
-      "details" : {
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å registrere kombinasjonen av en legemiddeldose og administrasjonstidspunkter innenfor en dag, som del av en legemiddelordinering eller legemiddelhåndtering, eller for andre ordinerte produkter der det er passende.",
-          "keywords" : [ "legemiddel", "ordinering", "foreskrive", "terapi", "substans", "medisin", "terapeutisk", "farmasøytisk", "produkt", "behandling", "væske", "ernæring", "timing", "administrering", "administrasjon", "dose" ],
-          "use" : "Brukes for å registrere kombinasjonen av en legemiddeldose og administrasjonstidspunkter innenfor en dag, som del av en legemiddelordinering eller legemiddelhåndtering, eller for andre ordinerte produkter der det er passende. Mønsteret for administrasjonstidspunkter innenfor en dag kan være så enkelt som ett administrasjonstidspunkt, eller flere administrasjonstidspunkter med forskjellige nivåer av kompleksitet.\r\n\r\nTimingdetaljer som ikke er innenfor én dag, f.eks. ukentlig eller månedlige timinger, håndteres av CLUSTER-arketypen \"Timing - repetering\" som benyttes i CLUSTER-arketypen \"Terapeutisk anvisning\".\r\n\r\nInnenfor en INSTRUCTION og i den igjen innenfor CLUSTER-arketypen \"Terapeutisk anvisning\" (CLUSTER.therapeutic_direction) for å registrere dose og timing av et ordinert produkt, som f.eks. et legemiddel.\r\n\r\nInnenfor en ACTION-arketype kan denne arketypen brukes for å registrere dosen og timing for den faktiske administreringen av det ordinerte produktet.\r\n\r\nSpesifikke tidspunkter for administrering og start/stopp-tidspunkter spesifiseres i CLUSTER-arketypen \"Timing - daglig\".",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt-br" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-br"
-          },
-          "purpose" : "Para gravar a combinação de uma quantidade de medicamento e o tempo de administração diário, como parte de uma solicitação ou gestão de medicamentos ou para outros itens terapêuticos/prescritos apropriados.\r\n",
-          "keywords" : [ "medicamento", "solicitação", "prescrever", "terapia", "substância", "fármaco", "terapêutico", "item terapêutico", "farmacêutico", "produto", "posologia", "tratamento", "fluido", "nutrição", "tempo", "administração", "dose" ],
-          "use" : "Usado para gravar a combinação de uma quantidade de medicamento e o tempo de administração diário, como parte de uma solicitação ou gestão de medicamentos ou para outros itens terapêuticos/prescritos apropriados.\r\nO padrão de tempo diário pode ser simples como uma administração única ou múltiplas administrações com níveis variados de complexidade.\r\n\r\nOs detalhes de tempo que não estão dentro de um mesmo dia p.e. semanalmente ou mensalmente são incluídos dentro do arquétipo CLUSTER \"Timing repetition\" carregado dentro do arquétipo CLUSTER \"Therapeutic direction\".\r\n\r\nNo contexto de uma INSTRUÇÃO terapêutica este arquétipo pode ser inserido dentro do SLOT \"Dosage administration\" no CLUSTER \"Therapeutic direction\" para gravar a dose e detalhes de tempo do padrão de uma administração única de um item terapêutico.\r\n\r\nNo contexto de um arquétipo tipo ACTION insira este arquétipo diretamente no SLOT \"Amount\" para gravar a dose e tempo da administração de um item terapêutico.\r\n\r\nTempos específicos de início e parada de administração devem ser especificados dentro do arquétipo CLUSTER \"Timing - daily\".\r\n",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record the combination of a medication amount and the administration timing within a single day, as part of a medication order or medication management or for other appropriate therapeutic/prescribable items.",
-          "keywords" : [ "medication", "order", "prescribe", "therapy", "substance", "drug", "therapeutic", "therapeutic good", "pharmaceutical", "product", "posology", "treatment", "fluid", "nutrition", "timing", "administration", "dose" ],
-          "use" : "Use to record the combination of a medication amount and the administration timing for a single day, as part of a medication order or medication management or for other appropriate therapeutic/prescribable items. \r\nThe timing pattern for a single day can be as simple as a single administration time, or multiple administration times with varying levels of complexity.\r\n\r\nTiming details which are not within a single day e.g weekly or monthly timings are carried in the CLUSTER 'Timing repetition' archetype carried within the CLUSTER 'Therapeutic direction' archetype.\r\n\r\nIn the context of a therapeutic INSTRUCTION this archetype may be inserted into the 'Dosage administration' SLOT in the 'Therapeutic direction' CLUSTER to record the dose and timing details of the pattern of single intended administrations of a therapeutic item. \r\n\r\nIn the context of an ACTION archetype insert this archetype directly into the 'Amount' SLOT to record the dose and timing of the actual administration of a therapeutic item.\r\n\r\nSpecific administration start/stop times should be specified within a contained CLUSTER 'Timing - daily' archetype.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.dosage.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-dosage-005.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0164.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_COUNT",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "magnitude",
-                "children" : [ {
-                  "@type" : "C_INTEGER",
-                  "rmTypeName" : "Integer",
-                  "occurrences" : "1..1",
-                  "constraint" : [ {
-                    "lower" : 1,
-                    "lowerIncluded" : true,
-                    "upperIncluded" : false,
-                    "lowerUnbounded" : false,
-                    "upperUnbounded" : true
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { },
-        "nb" : { },
-        "pt-br" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "93241d1b-825c-410b-bbf1-8b988652a902",
-    "rmName" : "openehr",
-    "rmRelease" : "1.0.3",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "Silje Ljosland Bakke",
-        "organisation" : "Nasjonal IKT HF"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt-br"
-      },
-      "author" : {
-        "name" : "Debora Farage, Fernanda Maia, Laíse Figueiredo",
-        "organisation" : "Core Consulting",
-        "email" : "contato@coreconsulting.com.br"
-      },
-      "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "a1298a46-14ff-4fb5-aa9c-5eedea34e8b3",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : { },
-      "details" : {
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.Medication_additional_details.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-Medication_additional_details-006.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "CLUSTER",
-          "nodeId" : "at0013",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "items",
-            "children" : [ {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0016.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-dosage-007.v1",
-              "referenceType" : "archetypeOverlay"
-            }, {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0022.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-device-008.v1",
-              "referenceType" : "archetypeOverlay"
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "e4cf28f6-275d-389b-b606-095a01963410",
-    "rmName" : "openehr",
-    "rmRelease" : "1.0.3",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "ac331b21-71f6-4ae5-950a-1a8d78c9f0c4",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : { },
-      "details" : {
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å registrere kombinasjonen av en legemiddeldose og administrasjonstidspunkter innenfor en dag, som del av en legemiddelordinering eller legemiddelhåndtering, eller for andre ordinerte produkter der det er passende.",
-          "keywords" : [ "legemiddel", "ordinering", "foreskrive", "terapi", "substans", "medisin", "terapeutisk", "farmasøytisk", "produkt", "behandling", "væske", "ernæring", "timing", "administrering", "administrasjon", "dose" ],
-          "use" : "Brukes for å registrere kombinasjonen av en legemiddeldose og administrasjonstidspunkter innenfor en dag, som del av en legemiddelordinering eller legemiddelhåndtering, eller for andre ordinerte produkter der det er passende. Mønsteret for administrasjonstidspunkter innenfor en dag kan være så enkelt som ett administrasjonstidspunkt, eller flere administrasjonstidspunkter med forskjellige nivåer av kompleksitet.\r\n\r\nTimingdetaljer som ikke er innenfor én dag, f.eks. ukentlig eller månedlige timinger, håndteres av CLUSTER-arketypen \"Timing - repetering\" som benyttes i CLUSTER-arketypen \"Terapeutisk anvisning\".\r\n\r\nInnenfor en INSTRUCTION og i den igjen innenfor CLUSTER-arketypen \"Terapeutisk anvisning\" (CLUSTER.therapeutic_direction) for å registrere dose og timing av et ordinert produkt, som f.eks. et legemiddel.\r\n\r\nInnenfor en ACTION-arketype kan denne arketypen brukes for å registrere dosen og timing for den faktiske administreringen av det ordinerte produktet.\r\n\r\nSpesifikke tidspunkter for administrering og start/stopp-tidspunkter spesifiseres i CLUSTER-arketypen \"Timing - daglig\".",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt-br" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-br"
-          },
-          "purpose" : "Para gravar a combinação de uma quantidade de medicamento e o tempo de administração diário, como parte de uma solicitação ou gestão de medicamentos ou para outros itens terapêuticos/prescritos apropriados.\r\n",
-          "keywords" : [ "medicamento", "solicitação", "prescrever", "terapia", "substância", "fármaco", "terapêutico", "item terapêutico", "farmacêutico", "produto", "posologia", "tratamento", "fluido", "nutrição", "tempo", "administração", "dose" ],
-          "use" : "Usado para gravar a combinação de uma quantidade de medicamento e o tempo de administração diário, como parte de uma solicitação ou gestão de medicamentos ou para outros itens terapêuticos/prescritos apropriados.\r\nO padrão de tempo diário pode ser simples como uma administração única ou múltiplas administrações com níveis variados de complexidade.\r\n\r\nOs detalhes de tempo que não estão dentro de um mesmo dia p.e. semanalmente ou mensalmente são incluídos dentro do arquétipo CLUSTER \"Timing repetition\" carregado dentro do arquétipo CLUSTER \"Therapeutic direction\".\r\n\r\nNo contexto de uma INSTRUÇÃO terapêutica este arquétipo pode ser inserido dentro do SLOT \"Dosage administration\" no CLUSTER \"Therapeutic direction\" para gravar a dose e detalhes de tempo do padrão de uma administração única de um item terapêutico.\r\n\r\nNo contexto de um arquétipo tipo ACTION insira este arquétipo diretamente no SLOT \"Amount\" para gravar a dose e tempo da administração de um item terapêutico.\r\n\r\nTempos específicos de início e parada de administração devem ser especificados dentro do arquétipo CLUSTER \"Timing - daily\".\r\n",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record the combination of a medication amount and the administration timing within a single day, as part of a medication order or medication management or for other appropriate therapeutic/prescribable items.",
-          "keywords" : [ "medication", "order", "prescribe", "therapy", "substance", "drug", "therapeutic", "therapeutic good", "pharmaceutical", "product", "posology", "treatment", "fluid", "nutrition", "timing", "administration", "dose" ],
-          "use" : "Use to record the combination of a medication amount and the administration timing for a single day, as part of a medication order or medication management or for other appropriate therapeutic/prescribable items. \r\nThe timing pattern for a single day can be as simple as a single administration time, or multiple administration times with varying levels of complexity.\r\n\r\nTiming details which are not within a single day e.g weekly or monthly timings are carried in the CLUSTER 'Timing repetition' archetype carried within the CLUSTER 'Therapeutic direction' archetype.\r\n\r\nIn the context of a therapeutic INSTRUCTION this archetype may be inserted into the 'Dosage administration' SLOT in the 'Therapeutic direction' CLUSTER to record the dose and timing details of the pattern of single intended administrations of a therapeutic item. \r\n\r\nIn the context of an ACTION archetype insert this archetype directly into the 'Amount' SLOT to record the dose and timing of the actual administration of a therapeutic item.\r\n\r\nSpecific administration start/stop times should be specified within a contained CLUSTER 'Timing - daily' archetype.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.dosage.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-dosage-007.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0164.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_COUNT",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "magnitude",
-                "children" : [ {
-                  "@type" : "C_INTEGER",
-                  "rmTypeName" : "Integer",
-                  "occurrences" : "1..1",
-                  "constraint" : [ {
-                    "lower" : 1,
-                    "lowerIncluded" : true,
-                    "upperIncluded" : false,
-                    "lowerUnbounded" : false,
-                    "upperUnbounded" : true
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { },
-        "nb" : { },
-        "pt-br" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "93241d1b-825c-410b-bbf1-8b988652a902",
-    "rmName" : "openehr",
-    "rmRelease" : "1.0.3",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "Silje Ljosland Bakke",
-        "organisation" : "Nasjonal IKT HF"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt-br"
-      },
-      "author" : {
-        "name" : "Debora Farage, Fernanda Maia, Laíse Figueiredo",
-        "organisation" : "Core Consulting",
-        "email" : "contato@coreconsulting.com.br"
-      },
-      "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "dbd6f4b3-a3e6-41b1-a21e-3530ac1ca212",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : { },
-      "details" : {
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "*To record the details of a medical device used in the provision of healthcare.(en)",
-          "keywords" : [ "*device(en)", "*machine(en)", "*implant(en)", "*appliance(en)", "*catheter(en)", "*prosthesis(en)", "*aid(en)", "*biomedical(en)", "*instrument(en)", "*equipment(en)", "*meter(en)", "*monitor(en)", "*software(en)" ],
-          "use" : "*Use to record the details of a medical device used in the provision of healthcare.\r\n\r\nUse of the term 'medical device' varies depending on context. Within the Standards world, the term device tends to refer to mechanical or electronic devices that support healthcare and require rigorous documentation regarding location tracking, maintenance, calibration, software versions etc.  Within the terminology context the use of device is very broad, including any medical device that can be used in direct or indirect provision of clinical care, as long as it is does not act in a way that exerts a direct pharmacological, metabolic or  immunological effect.\r\n\r\nExamples of medical devices range from simple devices such as urinary catheters, tongue depressors, contact lenses, breast implants, plain dressings, joint prostheses, syringe drivers and spirometers through to advanced devices such as artificial hearts, mobile phone applications and computerised devices that capture point-of-care medical measurements. \r\n\r\nIn the complex situation where a surgically implanted device is used as the means to deliver therapeutic agents such as chemotherapy directly into the body, this archetype will be used to record only the details about the medical device itself and the order for medication and details about the actual administration of the therapeutic agent will be recorded using specific medication-related INSTRUCTION and ACTION archetypes.\r\n\r\nThis archetype is designed to provide the framework for structured representation of any medical device and the data elements that are contained here are not specific for any one type of device. Single use devices will commonly require data elements such as Lot Number and Date of Expiry. In contrast these are usually not relevant for durable devices which will often have a set of identifiers, including a UID, Serial Number, Model etc.\r\n\r\nFurther, different types of devices will require specific information relevant to their purpose. This data can be recorded using specific CLUSTER archetypes inserted into the 'Specific propserties' SLOT. For example: use of a urinary catheter may require additional details about the diameter and length of catheter, material composition, number of lumens etc.\r\n\r\nIf the medical device has a number of components that require recording of details, each individual component should be recorded explicitly by using an additional CLUSTER.device archetype inserted into the 'Components' SLOT.\r\n\r\nThe data field 'Software Version' allows for only a single version to be recorded. This is primarily applicable for a device which is a software application. If the device has multiple software or hardware components that need to be specified, this should be done by using an addition CLUSTER.device inserted into the 'Components' SLOT.\r\n\r\nTo record additional details for durable or persistent devices that relate to ownership, physical location tracking, maintenance schedules etc, use CLUSTER.device_details archetype inserted into the 'Asset management' SLOT in this archetype.(en)",
-          "misuse" : "*Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic direct effect. For example: a medicine impregnated dressing should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.(en)",
-          "copyright" : "© *© openEHR Foundation(en), openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "es-ar" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "es-ar"
-          },
-          "purpose" : "Registrar los detalles de un objeto físico, producto o dispositivo utilizado en el sentido mas amplio de la provisión de cuidados de la salud, pero no como medio terapéutico o metabólico.",
-          "keywords" : [ "dispositivo", "máquina", "implante", "cateter", "prótesis", "auxiliar", "biomédico", "instrumento", "equipamiento", "medidor", "monitor", "físico", "objeto" ],
-          "use" : "Utilizado para registrar los detalles de cualquier dispositivo genérico que puede ser utilizado directamente de un modo terapéutico o diagnóstico, o indirectamente como apoyo a la provisión de cuidados de la salud. El uso del término dispositivo varía dependiendo del contexto. En el mundo de los estándares, el término dispositivo tiende a referirse a dispositivos mecánicos o electrónicos que actuan como apoyo del cuidado de la salud y que requiren documentación rigurosa en cuanto a especificaciones, mantenimiento, etc. En el contexto de las terminologías, el uso de dispositivo es muy amplio, incluyendo a cualquier objeto físico que pueda ser utilizado directa o indirectamente en la provisión de cuidados clínicos. Los ejemplos incluyen ventiladores, medidores de flujo expiratorio máximo, espirómetros, lentes oculares y de contacto, catéteres endovasculares, implantes mamarios, prótesis, tubos de drenaje y anillos para callos. \r\nEste arquetipo esta diseñado para proveer la base de una representación estructurada de cualquier dispositivo, desde el simple ejemplo de una marca de tira reactiva urinaria con una fecha de vencimiento hasta un oído biónico implantable que puede requerir documentación compleja, software, hardware, mantenimiento, calibración, etc.\r\nPara los casos de uso habituales podría ser apropiada la especialización de este arquetipo para formas específicas (ej.: cateter endovascular o cateter urinario).",
-          "misuse" : "No debe ser utilizado para el registro de medicamentos, vacunas o similares, que se utizan como medios terapéuticos o metabólicos.",
-          "copyright" : "© *© openEHR Foundation(en), openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt-br" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-br"
-          },
-          "purpose" : "Para gravar os detalhes de um dispositivo médico usado na prestação de cuidados de saúde.",
-          "keywords" : [ "dispositivo", "máquina", "implante", "catéter", "prótese", "cuidado", "biomedical", "instrumento", "equipamento", "monitor", "software", "utensílio" ],
-          "use" : "Use para gravar os detalhes de um dispositivo médico utilizado na prestação de cuidados de saúde .\r\n\r\nO uso do termo \"dispositivo médico\" varia dependendo do contexto. No mundo dos padrões, o termo dispositivo tende a referir-se a dispositivos mecânicos ou eletrônicos que apoiam cuidados de saúde e exigem documentação rigorosa sobre rastreamento de localização, manutenção, calibração, versões de software etc. Dentro do contexto da terminologia o uso de dispositivo é muito amplo , incluindo qualquer dispositivo médico que pode ser utilizado direta ou indiretamente em cuidados clínicos , desde que não atue de forma que exerça uma ação farmacológica direta , metabólica ou como efeito imunológico .\r\n\r\nOs dispositivos médicos variam de dispositivos simples, como catéteres urinários, abaixadores de língua, lentes de contato, próteses articulares, os implantes mamários e curativos simples, até dispositivos avançados, como corações artificiais, espirômetros, além de aplicativos para celulares e dispositivos computadorizados que capturam medidas médicas.\r\n\r\nEm situações complexas, onde um dispositivo implantado cirurgicamente é usado para administrar agentes terapêuticos, tais como a quimioterapia, este arquétipo irá ser utilizado para gravar apenas os detalhes sobre o próprio dispositivo médico e a prescrição da medicação e detalhes sobre o administração real do agente terapêutico serão registrados utilizando-se a arquétipos INSTRUCTION e ACTION sobre a medicação específica.\r\n\r\nEste arquétipo é projetado para fornecer a estrutura para representação estruturada de qualquer dispositivo médico e os elementos de dados que estão contidos aqui não são específicos para algum tipo de dispositivo. Dispositivos de uso único comumente vão exigir elementos de dados, tais como número de lote e data de validade. Em contrapartida estes geralmente não são relevantes para dispositivos duráveis que, muitas vezes, têm um conjunto de identificadores, incluindo uma UID, número de série, modelo, etc..\r\n\r\nAlém disso, diferentes tipos de dispositivos exigirão informações específicas relevantes para a sua finalidade. Estes dados podem ser gravados utilizando-se arquétipos CLUSTER específico inseridos no SLOT das propriedades específicas. Por exemplo: utilização de um catéter urinário pode exigir detalhes adicionais sobre o diâmetro e o comprimento do catéter, composição do material, número de lúmens etc.\r\n\r\nSe o dispositivo médico tem um número de componentes que necessitem de gravação de dados, todos os componentes individuais deverão ser registrados explicitamente utilizando-se um arquétipo CLUSTER.device adicional introduzido nos campos dos componentes.\r\n\r\nO campo de dados versão do software permite apenas uma única versão a ser gravado. Isto é especialmente aplicável para um dispositivo que é uma aplicação de software. Se o dispositivo possui vários componentes de software ou hardware que precisam ser especificados, este deve ser feito por meio de um CLUSTER.device além de inserido no slot do 'Componentes'.\r\n\r\nPara gravar detalhes adicionais para dispositivos duráveis ou permanentes que se relacionam com a posse, rastreamento de localização física, programações de manutenção etc, o uso do arquétipo CLUSTER.device_details no slot \"A gestão de ativos\" desse arquétipo.\r\n\r\nEste arquétipo foi projetado para uso genérico com outros arquétipos que precisam descrever um dispositivo. Exemplos incluem: OBSERVATION.blood_pressure para o esfigmomanômetro; OBSERVATION.ecg para o equipamento de ECG; OBSERVATION.urinalysis para as tiras de reagente e o dispositivo usado para os testes; ACTION.procedure; e CLUSTER.exam_tympanic_membrane para detalhar o otoscópio usado.",
-          "misuse" : "Não deve ser utilizado para gravar dados sobre os medicamentos que exercem uma ação farmacológica direta , metabólica ou efeito imunológico. Por exemplo: um curativo impregnado que exige uma prescrição deve ser gravado utilizando-se o o arquétipo INSTRUCTION.medication_order, com foco em ingredientes ativos, dosagem, etc.",
-          "copyright" : "© *© openEHR Foundation(en), openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "ar-sy" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "ar-sy"
-          },
-          "purpose" : "لتسجيل التفاصيل حول شيئ محسوس, مُنتَج أو جهيزة يتم استخدامها في أوسع وصف لتقديم الخدمة الصحية, و لكن دون طريقة أيضية أو علاجية مباشِرة.",
-          "keywords" : [ "الجهيزة", "الآلة", "الطُّعم", "جهاز مساعد", "القثطار", "البِدْلة", "مساعدة", "طبي بيولوجي", "أداة", "المعدات", "مقياس", "مِرْقب", "بدني/محسوس", "شيئ" ],
-          "use" : "يستخدم لتسجيل التفاصيل حول أي جهيزة جنيسة (غير محدودة الملكية) و التي يمكن أن تستخدم إما مباشرةً بطريقة علاجية أو تشخيصية أو تستخدم بشكل غير مباشر لدعم تقديم الخدمة الصحية.\r\nو يختلف استخدام اللفظ (جهيزة) على حسب السياق. \r\nو في داخل عالم المعايير, فإن اللفظ (جهيزة) يميل إلى الإشارة إلى الجهائز الإلكترونية أو الميكانيكية/الحركية و التي تدعم الرعاية الصحية, و تتطلب توثيق مكثف فيما يتعلق بالمواصفات و الصيانة... إلى آخره.\r\nو في سياق عالم المصطلحات فإن استخدام (جهيزة) واسع جدا, بما في ذلك أي شيئ محسوس يمكن استخدامه في تقديم الرعاية الصحية إما بشكل مباشر أو غير مباشر. \r\nو تتضمن الأمثلة: دوائر أجهزة التنفس الصناعي, مقاييس الجريان القِمِّي, مقاييس التنفس, نظارات العين, العدسات اللاصقة, القثطار داخل الوريد, طُعوم الثدي, البِدْلات, أنابيب المَنْزَح, و الحلقات المسمارية.\r\n\r\nو تم تصميم هذا النموذج ليمثل الأساس لعرض مركب لأي جهيزة, من مثال بسيط لنوع من غميسة البول مع تاريخ الاستخدام, إلى طعم أذن من كائن حيّ و الذي يتطلب توثيق مركب مثل البرنامج الإلكتروني, و الأجزاء الصلبة, و الصيانة و التعيير, إلى آخره.\r\n\r\nو بالنسبة لحالات الاستخدام المعتادة, فقد يكون من المناسب تخصيص هذا النموذج خاصة في القثطار داخل الوريد أو القثطار البولي.",
-          "misuse" : "لا يستخدم لتسجيل المنتجات, مثل الأدوية أو التطعيمات أو ما شابه, و التي تستخدم لأغراض علاجية أو أيضية",
-          "copyright" : "© *© openEHR Foundation(en), openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record the details of a medical device used in the provision of healthcare.",
-          "keywords" : [ "device", "machine", "implant", "appliance", "catheter", "prosthesis", "aid", "biomedical", "instrument", "equipment", "meter", "monitor", "software" ],
-          "use" : "Use to record the details of a medical device used in the provision of healthcare.\r\n\r\nUse of the term 'medical device' varies depending on context. Within the Standards world, the term device tends to refer to mechanical or electronic devices that support healthcare and require rigorous documentation regarding location tracking, maintenance, calibration, software versions etc.  Within the terminology context the use of device is very broad, including any medical device that can be used in direct or indirect provision of clinical care, as long as it does not act in a way that exerts a direct pharmacological, metabolic or  immunological effect.\r\n\r\nExamples of medical devices range from simple devices such as urinary catheters, tongue depressors, contact lenses, artificial joint implants, breast implants and plain dressings through to advanced devices such as artificial hearts, syringe drivers, spirometers, mobile phone applications and computerised devices that capture point-of-care medical measurements. \r\n\r\nIn the complex situation where a surgically implanted device is used as the means to deliver therapeutic agents such as chemotherapy directly into the body, this archetype will be used to record only the details about the medical device itself and the order for medication and details about the actual administration of the therapeutic agent will be recorded using specific medication-related INSTRUCTION and ACTION archetypes.\r\n\r\nThis archetype is designed to provide the framework for structured representation of any medical device and the data elements that are contained here are not specific for any one type of device. Single use devices will commonly require data elements such as Lot Number and Date of Expiry. In contrast these are usually not relevant for durable devices which will often have a set of identifiers, including a UID, Serial Number, Model etc.\r\n\r\nFurther, different types of devices will require specific information relevant to their purpose. This data can be recorded using specific CLUSTER archetypes inserted into the 'Specific properties' SLOT. For example: use of a urinary catheter may require additional details about the diameter and length of catheter, material composition, number of lumens etc.\r\n\r\nIf the medical device has a number of components that require recording of details, each individual component should be recorded explicitly by using an additional CLUSTER.device archetype inserted into the 'Components' SLOT.\r\n\r\nThe data field 'Software Version' allows for only a single version to be recorded. This is primarily applicable for a device which is a software application. If the device has multiple software or hardware components that need to be specified, this should be done by using an addition CLUSTER.device inserted into the 'Components' SLOT.\r\n\r\nTo record additional details for durable or persistent devices that relate to ownership, physical location tracking, maintenance schedules etc, use CLUSTER.device_details archetype inserted into the 'Asset management' SLOT in this archetype.\r\n\r\nThis archetype has been designed for generic use within other archetypes that need to describe a device. Examples include: OBSERVATION.blood_pressure for the sphygmomanometer; OBSERVATION.ecg for the ECG machine; OBSERVATION.urinalysis for the reactent strips and the device used for testing; ACTION.procedure; and CLUSTER.exam_tympanic_membrane to detail the otoscope used.",
-          "misuse" : "Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic effect. For example: a medicine impregnated dressing that requires a prescription should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.device.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-device-008.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0002.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0021.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0004.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0005.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0020.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0022.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0023.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0006.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0025.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0007.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0024.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0008.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "ar-sy" : { },
-        "en" : { },
-        "es-ar" : { },
-        "pt-br" : { },
-        "nb" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "2a8b319e-fe20-490b-9b6e-728c0f87858e",
-    "rmName" : "openehr",
-    "rmRelease" : "1.0.3",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "es-ar"
-      },
-      "author" : {
-        "name" : "Alan March",
-        "organisation" : "Hospital Universitario Austral, Buenos Aires, Argentina",
-        "email" : "amarch@cas.austral.edu.ar"
-      },
-      "accreditation" : "MD",
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "Lars Bitsch-Larsen",
-        "organisation" : "Haukeland University Hospital",
-        "email" : "lbla@helse-bergen.no"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt-br"
-      },
-      "author" : {
-        "name" : "Osmeire Chamelette Sanzovo",
-        "organisation" : "Hospital Sírio Libanês - SP",
-        "email" : "osmeire.acsanzovo@hsl.org.br"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "ar-sy"
-      },
-      "author" : {
-        "name" : "Mona Saleh"
-      },
+      "accreditation" : "?",
       "otherDetails" : { }
     } ]
   }, {
@@ -2330,6 +879,36 @@
           "keywords" : [ "procedimiento", "intervención", "terapia", "cirugía", "diagnóstico", "evaluación", "curación", "tratamiento" ],
           "use" : "Se utiliza para registrar información sobre las actividades requeridas para llevar a cabo un procedimiento, incluyendo planificación, coordinación, ejecución, suspensión, cancelación, documentación y finalización. Esto se hace mediante el registro de los datos sobre actividades específicas, según la definición de los pasos de la vía clínica definida en el arquetipo.\r\n\r\nEl alcance de este arquetipo abarca actividades para una amplia gama de procedimientos clínicos realizados para la evaluación, investigación, detección, diagnóstico,\r\ncurativos, terapéuticos o fines paliativos. Los ejemplos van desde las actividades relativamente simples, como la inserción de una cánula intravenosa, hasta operaciones quirúrgicas complejas.",
           "misuse" : "No utilizar para registrar detalles acerca de la anestesia, para eso utilizar un arquetipo de ACTION separado.\r\nNo utilizar para registrar detalles acerca de estudios por imágenes, para eso utilizar el arquetipo ACTION.imaging_exam.\r\nNo utilizar para registrar detalles acerca de estudios de laboratorio, para eso utilizar el arquetipo ACTION.laboratory_test.\r\nNo utilizar para registrar detalles acerca de educación brindada, para eso utilizar el arquetipo ACTION.health_education.\r\nNo utilizar para registrar detalles acerca de actividades administrativas, para eso utilizar un arquetipo ADMIN separado.\r\nNo utilizar para registrar detalles acerca de actividades relacionadas, como medicación administrada durante el procedimiento, o sobre imágenes que se utilizaron como guía durante el procedimiento, para esto utilizar arquetipos de ACTION separados, dentro de la misma plantilla.\r\nNo utilizar para registrar detalles acerca del informe de la operación, para eso se debe utilizar una plantilla donde este arquetipo sea parte de la misma.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Erfassung von Informationen über die erforderlichen Aktivitäten zum Ausführen einer Prozedur. Dazu zählen die Planung, Terminierung, Durchführung, Unterbrechung, Stornierung, Dokumentation und Beendigung.",
+          "keywords" : [ "Prozedur", "Vorgehen", "Verfahren", "Intervention", "Eingriff", "chirurgisch", "medizinisch", "klinisch", "therapeutisch", "Diagnostik", "diagnostisch", "heilen", "Behandlung", "Bewertung", "Untersuchung", "Früherkennung", "Screening", "palliativ", "Therapie", "Operation" ],
+          "use" : "Verwenden Sie diesen Archetypen zur Erfassung von Informationen über die erforderlichen Aktivitäten zum Ausführen einer Prozedur, einschließlich Planung, Terminierung, Durchführung, Unterbrechung, Stornierung, Dokumentation und Beendigung. Dies geschieht durch die Darstellung von Daten zu bestimmten Aktivitäten durch die \"Pathway\"-Verlaufsschritte.\r\n\r\nDer Anwendungsbereich dieses Archetyps umfasst Aktivitäten für eine breite Palette von klinischen Prozeduren, die für evaluative, ermittelnde, vorsorgliche, diagnostische, kurative, therapeutische oder palliative Zwecke durchgeführt werden. Die Beispiele reichen von relativ einfachen Aktivitäten wie dem Legen einer intravenösen Kanüle bis hin zu komplexen chirurgischen Eingriffen.\r\n\r\nZusätzliche strukturierte und detaillierte Informationen über die Prozedur können bei Bedarf mit Hilfe von zweckmäßigen Archetypen erfasst werden, die in den Slot \"Details zur Prozedur\" eingefügt werden.\r\n\r\nZeitpläne, die sich auf eine Prozedur beziehen, können auf zwei Arten verwaltet werden:\r\n- Unter Verwendung des Referenzmodells - die Zeit für die Ausführung eines beliebigen \"Pathway\"-Verlaufsschrittes verwendet das Attribut ACTION Zeit für jeden Schritt.\r\n- Archetypische Datenelemente:\r\n--- das Datenelement \"Geplantes Datum/Uhrzeit\" soll die genaue Zeit erfassen, zu der die Prozedur geplant ist. Hinweis: Das entsprechende Attribut ACTION Zeit für den geplanten \"Pathway\"-Verlaufsschritt erfasst die Zeit, zu der die Prozedur in einem System geplant wurde, nicht das vorgesehene Datum/Uhrzeit, zu der die Prozedur ausgeführt werden soll; und\r\n--- das \"Enddatum/-uhrzeit\" soll die genaue Zeit erfassen, zu der die Prozedur beendet wurde. Damit können die komplexen Vorgänge mit mehreren Komponenten dokumentiert werden. Hinweis: Das entsprechende Attribut ACTION Zeit in dem Element \"Prozedur durchgeführt\", dokumentiert den Beginn der einzelnen durchgeführten Komponenten. Das Datenelement \"Enddatum/-uhrzeit\" erfasst das Datum/die Uhrzeit der letzten aktiven Komponente der Prozedur. Dadurch kann die volle Dauer der aktiven Prozedur berechnet werden.\r\n\r\nIm Rahmen eines Operationsberichts wird dieser Archetyp nur verwendet, um zu erfassen, was während der Operation durchgeführt wurde. Eigenständige Archetypen werden verwendet, um die anderen erforderlichen Komponenten des Operationsberichts zu erfassen, einschließlich der Entnahme von Gewebeproben, der Verwendung von Bildkontrolle, der OP-Befunde, postoperativer Anweisungen und Plänen für die Nachsorge.\r\n\r\nIm Rahmen einer Problemliste oder Zusammenfassung kann dieser Archetyp verwendet werden, um durchgeführte Prozeduren darzustellen. Der Archetyp EVALUATION.Problem/Diagnose wird verwendet, um die Probleme und Diagnosen des Patienten darzustellen.\r\n\r\nIn der Praxis werden viele Prozeduren (z.B. in der ambulanten Versorgung) einmalig durchgeführt und nicht im Voraus angeordnet. Angaben zur Prozedur werden im Datenelement \"Prozedur beendet\" hinzugefügt. In einigen Fällen wird eine wiederkehrende Prozedur angeordnet. In diesen Fällen werden jeweils Daten mit dem Element \"Prozedur durchgeführt\" erfasst, so dass die Instruktion im aktiven Zustand verbleibt. Wenn das letzte Ereignis erfasst wird, wird die Aktion \"Prozedur beendet\" dokumentiert. Dies zeigt an, dass sich diese Prozedur nun im abgeschlossenen Zustand befindet.\r\n\r\nIn anderen Fällen, wie z.B. in der Sekundärversorgung, kann es eine formelle Anordnung für eine Prozedur mit einem entsprechenden INSTRUCTION-Archetyp geben. Dieser ACTION-Archetyp kann dann verwendet werden, um den Workflow aufzuzeichnen, wann und wie der Auftrag ausgeführt wurde.\r\n\r\nDie Erfassung von Informationen mit diesem ACTION-Archetyp zeigt an, dass tatsächlich eine Art von Aktivität stattgefunden hat; dies ist in der Regel die Prozedur selbst, kann aber auch ein fehlgeschlagener Versuch oder eine andere Aktivität, wie das Verschieben der Prozedur, sein. Wenn es eine formale Anordnung für die Prozedur gibt, wird der Status dieser Anordnung durch das \"Pathway\" Element, für das Daten erfasst werden, dargestellt. Mit diesem Archetyp kann beispielsweise der Fortschritt einer gastroskopischen Anordnung durch separate Einträge in den \"Pathway\" Elementen erfasst werden:\r\n- Erfassung des geplante Startdatum/-zeit für die Gastroskopie (Prozedur geplant (zeitlich)); und\r\n- Dokumentation, dass das Gastroskopieverfahren abgeschlossen ist, einschließlich zusätzlicher Angaben zur Prozedur (Prozedur beendet).\r\n\r\nBitte beachten Sie, dass es im openEHR-Referenzmodell ein Attribut \"Zeit\" gibt, das dazu dient, das Datum und die Uhrzeit zu erfassen, zu der jeder Verlaufsschritt der Aktion ausgeführt wurde. Dies ist das Attribut, mit dem der Beginn der Prozedur (mit dem Schritt \"Prozedur durchgeführt\") oder die Zeit, zu der die Prozedur abgebrochen wurde (mit dem Schritt \"Prozedur abgebrochen\"), erfasst wird.",
+          "misuse" : "Nicht zur Erfassung von Angaben zur Anästhesie - verwenden Sie dazu einen separaten ACTION-Archetyp.\r\n\r\nNicht zur Erfassung von Angaben über bildgebende Untersuchungen - verwenden Sie dazu den Archetypen ACTION.imaging_exam.\r\n\r\nNicht zur Erfassung von Angaben über Laboruntersuchungen - verwenden Sie dazu den Archetypen ACTION.laboratory_test.\r\n\r\nNicht zur Erfassung von Angaben über erbrachte Ausbildungen/Schulungen - verwenden Sie dazu den Archetypen ACTION.health_education.\r\n\r\nNicht zur Erfassung von Angaben über administrative Aktivitäten - verwenden Sie zu diesem Zweck spezifische ADMIN-Archetypen.\r\n\r\nNicht zu verwenden, um Angaben über zusammenhängende Aktivitäten zu erfassen. Beispiele für zusammenhängende Aktivitäten sind: der Einsatz von Gefrierschnitten, die während einer Operation durchgeführt werden; Medikamente, die im Rahmen der Prozedur verabreicht werden oder der Einsatz von Bildkontrolle während der Prozedur. Verwenden Sie zu diesem Zweck eigenständige und spezifische ACTION-Archetypen innerhalb des Templates.\r\n\r\nNicht zur Erfassung eines vollständigen Berichts über eine OP- oder eine Prozedur - verwenden Sie ein Template, in der dieser Archetyp nur eine Komponente des Gesamtberichts darstellt.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera information om de aktiviteter som krävs för att genomföra en procedur, inklusive planering, schemaläggning, utförande, avstängning, avbokning, dokumentation och slutförande. \r\n\r\n",
+          "keywords" : [ "*procedur", "*intervention", "*kirurgi", "*medicinsk", "*klinisk", "*terapeutisk", "*diagnostisk", "*botande", "*behandling", "*utredning", "*undersökning", "*screening", "*palliativ", "*terapi" ],
+          "use" : "Används för att registrera information om de aktiviteter som krävs för att genomföra en procedur, inklusive planering, schemaläggning, utförande, avstängning, avbokning, dokumentation och slutförande. Detta görs genom registrering av data mot specifika aktiviteter, som definieras av \"Pathway\" -flödesstegen i denna arketyp.\r\n \r\nDenna arketyp omfattar aktiviteter för ett brett spektrum av kliniska procedurer som utförs för utvärderande, undersökande, screening, diagnostiska, botande, terapeutiska eller palliativa ändamål. Till exempel kan den användas för allt från relativt enkla aktiviteter, såsom insättning av en intravenös kanyl, till komplexa kirurgiska operationer. \r\n\r\nYtterligare strukturerad och detaljerad information om proceduren kan fångas med hjälp av specifika arketyper infogade i rutan 'Procedur detaljer', om så krävs. \r\n\r\nTider relaterade till ett förfarande kan hanteras på ett av två sätt: \r\n- Med hjälp av referensmodellen - tiden för utförandet av något vägsteg ska använda attributet ACTION time för varje steg. \r\n- Archetyped dataelement: \r\n--- dataelementet 'Schemalagt datum/tid' är avsett att registrera den exakta tidpunkt då proceduren planeras. \r\n\r\nObs! Motsvarande ACTION-tidsattribut för det schemalagda vägsteget registrerar den tid som proceduren planerades i ett system, inte det avsedda datumet/tiden då proceduren är avsedd att genomföras; och \r\n--- \"Slutdatum/tid\" är avsedd att registrera den exakta tidpunkt då proceduren avslutades. Den kan användas för att dokumentera komplexa procedurer med flera komponenter. \r\n\r\nObs! Motsvarande ACTION-tidsattribut för \"Procedur utförd\" kommer att dokumentera den tid varje komponent som utfördes påbörjades. Det \"Slutliga slutdatum/tid\" -element registrerar datum/tid för den slutliga aktiva komponenten i proceduren. \r\nDetta gör det möjligt att beräkna en fullständig varaktighet av det aktiva förfarandet. \r\n\r\nInom ramen för en operationsrapport kommer denna arketyp att användas för att bara registrera vad som gjordes under proceduren. Separata arketyper kommer att användas för att registrera de andra nödvändiga komponenterna i operationsrapporten, inklusive att ta prover av vävnadsprover, användning av avbildningsvägledning, funktionsresultat, postoperativa instruktioner och planer för uppföljning. \r\n\r\nInom ramen för en problemlista eller sammanfattning kan denna arketyp användas för att representera procedurer som har utförts. EVALUATION.problem_diagnosis kommer att användas för att representera patientens problem och diagnoser. \r\n\r\nI praktiken kommer många förfaranden (till exempel ambulansvård) att inträffa en gång och inte beställas i förväg. Detaljerna om proceduren kommer att läggas till i steget, \"Procedur slutförd\". I vissa fall kommer ett återkommande förfarande att beställas, och i denna situation registreras data över steget \"Procedur utförd\" vid varje tillfälle och lämnar instruktionen i aktivt tillstånd. När den senaste händelsen registreras registreras åtgärden 'Procedur slutförd' som visar att denna procedur nu är i det färdiga tillståndet. \r\n\r\nI andra situationer, till exempel sekundärvård, kan det finnas en formell order för ett förfarande med en motsvarande INSTRUKTION-arketyp. Denna ACTION-arketyp kan sedan användas för att registrera arbetsflödet för när och hur proceduren har genomförts. \r\n\r\nDokumentation med den här ACTION-arketypen indikerar att någon form av aktivitet faktiskt har inträffat; detta är vanligtvis själva proceduren men kan vara ett misslyckat försök eller en annan aktivitet som att skjuta upp proceduren. Om det finns en formell beställning för proceduren representeras tillståndet för denna beställning av det Pathway-steg mot vilket data registreras. Till exempel, med den här arketypen kan det fortskridande tillståndet för en Gastroskopi-beställning registreras genom separata poster i EHR-framstegsanteckningarna vid varje \"Pathway\" -steg: \r\n- registrera schemalagt startdatum/tid för gastroskopi (schemalagd procedur); och \r\n- registrera att gastroskopiproceduren har slutförts, inklusive information om proceduruppgifterna (proceduren avslutad). \r\n\r\nObservera att i openEHR-referensmodellen finns ett attribut 'Time' som är avsett att registrera datum och tidpunkt då varje steg i åtgärden utfördes. Detta är attributet som ska användas för att registrera inledningen av proceduren (med hjälp av steget 'Procedur utfört') eller den tid då proceduren avbröts (med hjälp av steget 'Procedur avbruten').\r\n",
+          "misuse" : "Får inte användas för att registrera detaljer om narkos - använd en separat ACTION-arketyp för detta ändamål. \r\n\r\nAnvänds inte för att registrera detaljer om bild undersökningar - använd ACTION.imaging_exam för detta ändamål. \r\n\r\nAnvänds inte för att registrera detaljer om laboratorieundersökningar - använd ACTION.laboratory_test för detta ändamål. \r\n\r\nAnvänds inte för att registrera detaljer om utbildning - använd ACTION.health_education för detta ändamål. \r\n\r\nAnvänds inte för att registrera detaljer om administrativa aktiviteter - använd specifika ADMIN-arketyper för detta ändamål. \r\n\r\nFår inte användas för att registrera detaljer om relaterade aktiviteter, såsom användning av frysta snitt som tagits under en operation, läkemedel som administreras som en del av proceduren eller när bildvisningsvägledning används under proceduren - använd separata och specifika ACTION-arketyper inom samma mall för detta syfte. \r\n\r\nAnvänds inte för att registrera en hel operation eller procedurrapport - använd en mall där den här arketypen bara är en komponent i hela rapporten.\r\n",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -2469,24 +1048,6 @@
               "nodeId" : "at0005.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..*",
-              "nodeId" : "at0003.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-device-010.v1",
-              "referenceType" : "archetypeOverlay"
-            }, {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..*",
-              "nodeId" : "at0003.2",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-medication_supply_amount-011.v0",
-              "referenceType" : "archetypeOverlay"
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -2504,7 +1065,9 @@
         "ar-sy" : { },
         "ru" : { },
         "nb" : { },
-        "es" : { }
+        "es" : { },
+        "de" : { },
+        "sv" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -2604,262 +1167,18 @@
       },
       "accreditation" : "Computer Engineer",
       "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "dbd6f4b3-a3e6-41b1-a21e-3530ac1ca212",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : { },
-      "details" : {
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "*To record the details of a medical device used in the provision of healthcare.(en)",
-          "keywords" : [ "*device(en)", "*machine(en)", "*implant(en)", "*appliance(en)", "*catheter(en)", "*prosthesis(en)", "*aid(en)", "*biomedical(en)", "*instrument(en)", "*equipment(en)", "*meter(en)", "*monitor(en)", "*software(en)" ],
-          "use" : "*Use to record the details of a medical device used in the provision of healthcare.\r\n\r\nUse of the term 'medical device' varies depending on context. Within the Standards world, the term device tends to refer to mechanical or electronic devices that support healthcare and require rigorous documentation regarding location tracking, maintenance, calibration, software versions etc.  Within the terminology context the use of device is very broad, including any medical device that can be used in direct or indirect provision of clinical care, as long as it is does not act in a way that exerts a direct pharmacological, metabolic or  immunological effect.\r\n\r\nExamples of medical devices range from simple devices such as urinary catheters, tongue depressors, contact lenses, breast implants, plain dressings, joint prostheses, syringe drivers and spirometers through to advanced devices such as artificial hearts, mobile phone applications and computerised devices that capture point-of-care medical measurements. \r\n\r\nIn the complex situation where a surgically implanted device is used as the means to deliver therapeutic agents such as chemotherapy directly into the body, this archetype will be used to record only the details about the medical device itself and the order for medication and details about the actual administration of the therapeutic agent will be recorded using specific medication-related INSTRUCTION and ACTION archetypes.\r\n\r\nThis archetype is designed to provide the framework for structured representation of any medical device and the data elements that are contained here are not specific for any one type of device. Single use devices will commonly require data elements such as Lot Number and Date of Expiry. In contrast these are usually not relevant for durable devices which will often have a set of identifiers, including a UID, Serial Number, Model etc.\r\n\r\nFurther, different types of devices will require specific information relevant to their purpose. This data can be recorded using specific CLUSTER archetypes inserted into the 'Specific propserties' SLOT. For example: use of a urinary catheter may require additional details about the diameter and length of catheter, material composition, number of lumens etc.\r\n\r\nIf the medical device has a number of components that require recording of details, each individual component should be recorded explicitly by using an additional CLUSTER.device archetype inserted into the 'Components' SLOT.\r\n\r\nThe data field 'Software Version' allows for only a single version to be recorded. This is primarily applicable for a device which is a software application. If the device has multiple software or hardware components that need to be specified, this should be done by using an addition CLUSTER.device inserted into the 'Components' SLOT.\r\n\r\nTo record additional details for durable or persistent devices that relate to ownership, physical location tracking, maintenance schedules etc, use CLUSTER.device_details archetype inserted into the 'Asset management' SLOT in this archetype.(en)",
-          "misuse" : "*Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic direct effect. For example: a medicine impregnated dressing should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.(en)",
-          "copyright" : "© *© openEHR Foundation(en), openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "es-ar" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "es-ar"
-          },
-          "purpose" : "Registrar los detalles de un objeto físico, producto o dispositivo utilizado en el sentido mas amplio de la provisión de cuidados de la salud, pero no como medio terapéutico o metabólico.",
-          "keywords" : [ "dispositivo", "máquina", "implante", "cateter", "prótesis", "auxiliar", "biomédico", "instrumento", "equipamiento", "medidor", "monitor", "físico", "objeto" ],
-          "use" : "Utilizado para registrar los detalles de cualquier dispositivo genérico que puede ser utilizado directamente de un modo terapéutico o diagnóstico, o indirectamente como apoyo a la provisión de cuidados de la salud. El uso del término dispositivo varía dependiendo del contexto. En el mundo de los estándares, el término dispositivo tiende a referirse a dispositivos mecánicos o electrónicos que actuan como apoyo del cuidado de la salud y que requiren documentación rigurosa en cuanto a especificaciones, mantenimiento, etc. En el contexto de las terminologías, el uso de dispositivo es muy amplio, incluyendo a cualquier objeto físico que pueda ser utilizado directa o indirectamente en la provisión de cuidados clínicos. Los ejemplos incluyen ventiladores, medidores de flujo expiratorio máximo, espirómetros, lentes oculares y de contacto, catéteres endovasculares, implantes mamarios, prótesis, tubos de drenaje y anillos para callos. \r\nEste arquetipo esta diseñado para proveer la base de una representación estructurada de cualquier dispositivo, desde el simple ejemplo de una marca de tira reactiva urinaria con una fecha de vencimiento hasta un oído biónico implantable que puede requerir documentación compleja, software, hardware, mantenimiento, calibración, etc.\r\nPara los casos de uso habituales podría ser apropiada la especialización de este arquetipo para formas específicas (ej.: cateter endovascular o cateter urinario).",
-          "misuse" : "No debe ser utilizado para el registro de medicamentos, vacunas o similares, que se utizan como medios terapéuticos o metabólicos.",
-          "copyright" : "© *© openEHR Foundation(en), openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt-br" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-br"
-          },
-          "purpose" : "Para gravar os detalhes de um dispositivo médico usado na prestação de cuidados de saúde.",
-          "keywords" : [ "dispositivo", "máquina", "implante", "catéter", "prótese", "cuidado", "biomedical", "instrumento", "equipamento", "monitor", "software", "utensílio" ],
-          "use" : "Use para gravar os detalhes de um dispositivo médico utilizado na prestação de cuidados de saúde .\r\n\r\nO uso do termo \"dispositivo médico\" varia dependendo do contexto. No mundo dos padrões, o termo dispositivo tende a referir-se a dispositivos mecânicos ou eletrônicos que apoiam cuidados de saúde e exigem documentação rigorosa sobre rastreamento de localização, manutenção, calibração, versões de software etc. Dentro do contexto da terminologia o uso de dispositivo é muito amplo , incluindo qualquer dispositivo médico que pode ser utilizado direta ou indiretamente em cuidados clínicos , desde que não atue de forma que exerça uma ação farmacológica direta , metabólica ou como efeito imunológico .\r\n\r\nOs dispositivos médicos variam de dispositivos simples, como catéteres urinários, abaixadores de língua, lentes de contato, próteses articulares, os implantes mamários e curativos simples, até dispositivos avançados, como corações artificiais, espirômetros, além de aplicativos para celulares e dispositivos computadorizados que capturam medidas médicas.\r\n\r\nEm situações complexas, onde um dispositivo implantado cirurgicamente é usado para administrar agentes terapêuticos, tais como a quimioterapia, este arquétipo irá ser utilizado para gravar apenas os detalhes sobre o próprio dispositivo médico e a prescrição da medicação e detalhes sobre o administração real do agente terapêutico serão registrados utilizando-se a arquétipos INSTRUCTION e ACTION sobre a medicação específica.\r\n\r\nEste arquétipo é projetado para fornecer a estrutura para representação estruturada de qualquer dispositivo médico e os elementos de dados que estão contidos aqui não são específicos para algum tipo de dispositivo. Dispositivos de uso único comumente vão exigir elementos de dados, tais como número de lote e data de validade. Em contrapartida estes geralmente não são relevantes para dispositivos duráveis que, muitas vezes, têm um conjunto de identificadores, incluindo uma UID, número de série, modelo, etc..\r\n\r\nAlém disso, diferentes tipos de dispositivos exigirão informações específicas relevantes para a sua finalidade. Estes dados podem ser gravados utilizando-se arquétipos CLUSTER específico inseridos no SLOT das propriedades específicas. Por exemplo: utilização de um catéter urinário pode exigir detalhes adicionais sobre o diâmetro e o comprimento do catéter, composição do material, número de lúmens etc.\r\n\r\nSe o dispositivo médico tem um número de componentes que necessitem de gravação de dados, todos os componentes individuais deverão ser registrados explicitamente utilizando-se um arquétipo CLUSTER.device adicional introduzido nos campos dos componentes.\r\n\r\nO campo de dados versão do software permite apenas uma única versão a ser gravado. Isto é especialmente aplicável para um dispositivo que é uma aplicação de software. Se o dispositivo possui vários componentes de software ou hardware que precisam ser especificados, este deve ser feito por meio de um CLUSTER.device além de inserido no slot do 'Componentes'.\r\n\r\nPara gravar detalhes adicionais para dispositivos duráveis ou permanentes que se relacionam com a posse, rastreamento de localização física, programações de manutenção etc, o uso do arquétipo CLUSTER.device_details no slot \"A gestão de ativos\" desse arquétipo.\r\n\r\nEste arquétipo foi projetado para uso genérico com outros arquétipos que precisam descrever um dispositivo. Exemplos incluem: OBSERVATION.blood_pressure para o esfigmomanômetro; OBSERVATION.ecg para o equipamento de ECG; OBSERVATION.urinalysis para as tiras de reagente e o dispositivo usado para os testes; ACTION.procedure; e CLUSTER.exam_tympanic_membrane para detalhar o otoscópio usado.",
-          "misuse" : "Não deve ser utilizado para gravar dados sobre os medicamentos que exercem uma ação farmacológica direta , metabólica ou efeito imunológico. Por exemplo: um curativo impregnado que exige uma prescrição deve ser gravado utilizando-se o o arquétipo INSTRUCTION.medication_order, com foco em ingredientes ativos, dosagem, etc.",
-          "copyright" : "© *© openEHR Foundation(en), openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "ar-sy" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "ar-sy"
-          },
-          "purpose" : "لتسجيل التفاصيل حول شيئ محسوس, مُنتَج أو جهيزة يتم استخدامها في أوسع وصف لتقديم الخدمة الصحية, و لكن دون طريقة أيضية أو علاجية مباشِرة.",
-          "keywords" : [ "الجهيزة", "الآلة", "الطُّعم", "جهاز مساعد", "القثطار", "البِدْلة", "مساعدة", "طبي بيولوجي", "أداة", "المعدات", "مقياس", "مِرْقب", "بدني/محسوس", "شيئ" ],
-          "use" : "يستخدم لتسجيل التفاصيل حول أي جهيزة جنيسة (غير محدودة الملكية) و التي يمكن أن تستخدم إما مباشرةً بطريقة علاجية أو تشخيصية أو تستخدم بشكل غير مباشر لدعم تقديم الخدمة الصحية.\r\nو يختلف استخدام اللفظ (جهيزة) على حسب السياق. \r\nو في داخل عالم المعايير, فإن اللفظ (جهيزة) يميل إلى الإشارة إلى الجهائز الإلكترونية أو الميكانيكية/الحركية و التي تدعم الرعاية الصحية, و تتطلب توثيق مكثف فيما يتعلق بالمواصفات و الصيانة... إلى آخره.\r\nو في سياق عالم المصطلحات فإن استخدام (جهيزة) واسع جدا, بما في ذلك أي شيئ محسوس يمكن استخدامه في تقديم الرعاية الصحية إما بشكل مباشر أو غير مباشر. \r\nو تتضمن الأمثلة: دوائر أجهزة التنفس الصناعي, مقاييس الجريان القِمِّي, مقاييس التنفس, نظارات العين, العدسات اللاصقة, القثطار داخل الوريد, طُعوم الثدي, البِدْلات, أنابيب المَنْزَح, و الحلقات المسمارية.\r\n\r\nو تم تصميم هذا النموذج ليمثل الأساس لعرض مركب لأي جهيزة, من مثال بسيط لنوع من غميسة البول مع تاريخ الاستخدام, إلى طعم أذن من كائن حيّ و الذي يتطلب توثيق مركب مثل البرنامج الإلكتروني, و الأجزاء الصلبة, و الصيانة و التعيير, إلى آخره.\r\n\r\nو بالنسبة لحالات الاستخدام المعتادة, فقد يكون من المناسب تخصيص هذا النموذج خاصة في القثطار داخل الوريد أو القثطار البولي.",
-          "misuse" : "لا يستخدم لتسجيل المنتجات, مثل الأدوية أو التطعيمات أو ما شابه, و التي تستخدم لأغراض علاجية أو أيضية",
-          "copyright" : "© *© openEHR Foundation(en), openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record the details of a medical device used in the provision of healthcare.",
-          "keywords" : [ "device", "machine", "implant", "appliance", "catheter", "prosthesis", "aid", "biomedical", "instrument", "equipment", "meter", "monitor", "software" ],
-          "use" : "Use to record the details of a medical device used in the provision of healthcare.\r\n\r\nUse of the term 'medical device' varies depending on context. Within the Standards world, the term device tends to refer to mechanical or electronic devices that support healthcare and require rigorous documentation regarding location tracking, maintenance, calibration, software versions etc.  Within the terminology context the use of device is very broad, including any medical device that can be used in direct or indirect provision of clinical care, as long as it does not act in a way that exerts a direct pharmacological, metabolic or  immunological effect.\r\n\r\nExamples of medical devices range from simple devices such as urinary catheters, tongue depressors, contact lenses, artificial joint implants, breast implants and plain dressings through to advanced devices such as artificial hearts, syringe drivers, spirometers, mobile phone applications and computerised devices that capture point-of-care medical measurements. \r\n\r\nIn the complex situation where a surgically implanted device is used as the means to deliver therapeutic agents such as chemotherapy directly into the body, this archetype will be used to record only the details about the medical device itself and the order for medication and details about the actual administration of the therapeutic agent will be recorded using specific medication-related INSTRUCTION and ACTION archetypes.\r\n\r\nThis archetype is designed to provide the framework for structured representation of any medical device and the data elements that are contained here are not specific for any one type of device. Single use devices will commonly require data elements such as Lot Number and Date of Expiry. In contrast these are usually not relevant for durable devices which will often have a set of identifiers, including a UID, Serial Number, Model etc.\r\n\r\nFurther, different types of devices will require specific information relevant to their purpose. This data can be recorded using specific CLUSTER archetypes inserted into the 'Specific properties' SLOT. For example: use of a urinary catheter may require additional details about the diameter and length of catheter, material composition, number of lumens etc.\r\n\r\nIf the medical device has a number of components that require recording of details, each individual component should be recorded explicitly by using an additional CLUSTER.device archetype inserted into the 'Components' SLOT.\r\n\r\nThe data field 'Software Version' allows for only a single version to be recorded. This is primarily applicable for a device which is a software application. If the device has multiple software or hardware components that need to be specified, this should be done by using an addition CLUSTER.device inserted into the 'Components' SLOT.\r\n\r\nTo record additional details for durable or persistent devices that relate to ownership, physical location tracking, maintenance schedules etc, use CLUSTER.device_details archetype inserted into the 'Asset management' SLOT in this archetype.\r\n\r\nThis archetype has been designed for generic use within other archetypes that need to describe a device. Examples include: OBSERVATION.blood_pressure for the sphygmomanometer; OBSERVATION.ecg for the ECG machine; OBSERVATION.urinalysis for the reactent strips and the device used for testing; ACTION.procedure; and CLUSTER.exam_tympanic_membrane to detail the otoscope used.",
-          "misuse" : "Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic effect. For example: a medicine impregnated dressing that requires a prescription should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.device.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-device-010.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0003.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0002.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0021.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0004.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0005.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0020.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0022.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0023.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0006.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0025.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0007.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0024.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0008.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "ar-sy" : { },
-        "en" : { },
-        "es-ar" : { },
-        "pt-br" : { },
-        "nb" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "2a8b319e-fe20-490b-9b6e-728c0f87858e",
-    "rmName" : "openehr",
-    "rmRelease" : "1.0.3",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "es-ar"
-      },
-      "author" : {
-        "name" : "Alan March",
-        "organisation" : "Hospital Universitario Austral, Buenos Aires, Argentina",
-        "email" : "amarch@cas.austral.edu.ar"
-      },
-      "accreditation" : "MD",
-      "otherDetails" : { }
     }, {
       "@type" : "TRANSLATION_DETAILS",
       "language" : {
         "terminologyId" : {
           "value" : "ISO_639-1"
         },
-        "codeString" : "nb"
+        "codeString" : "de"
       },
       "author" : {
-        "name" : "Lars Bitsch-Larsen",
-        "organisation" : "Haukeland University Hospital",
-        "email" : "lbla@helse-bergen.no"
+        "name" : "Kim Sommer, Natalia Strauch",
+        "organisation" : "MHH, Medizinische Hochschule Hannover",
+        "email" : "sommer.kimkatrin@mh-hannover.de, Strauch.Natalia@mh-hannover.de"
       },
       "otherDetails" : { }
     }, {
@@ -2868,285 +1187,13 @@
         "terminologyId" : {
           "value" : "ISO_639-1"
         },
-        "codeString" : "pt-br"
+        "codeString" : "sv"
       },
       "author" : {
-        "name" : "Osmeire Chamelette Sanzovo",
-        "organisation" : "Hospital Sírio Libanês - SP",
-        "email" : "osmeire.acsanzovo@hsl.org.br"
+        "name" : "Sofia Lång Janstad, Sofia Janstad",
+        "organisation" : "SLL",
+        "email" : "sofia.lang-janstad@sll.se"
       },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "ar-sy"
-      },
-      "author" : {
-        "name" : "Mona Saleh"
-      },
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "365f8abf-be21-43e8-bb00-f053ca88947a",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : { },
-      "details" : {
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å registrere mengden legemiddel, vaksine, eller annen terapeutisk vare som skal leveres eller utleveres til pasienten, som del av en autorisering, utlevering eller administrering, både i legemiddelforordningen og i en påfølgende legemiddelhandling.",
-          "keywords" : [ ],
-          "use" : "Brukes til å registrere mengden legemiddel, vaksine, eller annen terapeutisk vare som skal leveres eller utleveres til pasienten, som del av en autorisering, utlevering eller administrering, både i legemiddelforordningen og i en påfølgende legemiddelhandling.",
-          "misuse" : "Brukes ikke for å registre en dose eller styrke som del av en anvisning. Disse registreres som en del av arketypene INSTRUCTION.medication_order eller CLUSTER.medication_substance.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt-br" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-br"
-          },
-          "purpose" : "Para registrar a quantidade de medicamento, vacina ou outro item terapêutico a ser fornecido ao paciente, como parte da autorização, dispensação ou administração, tanto no contexto da prescrição original quanto em uma ação subsequente de repetição da prescrição.",
-          "keywords" : [ "Suprimento de medicamentos" ],
-          "use" : "Para registrar a quantidade de medicamento, vacina ou outro item terapêutico a ser fornecido ao paciente, como parte da autorização, dispensação ou administração, tanto no contexto da prescrição original quanto em uma ação subsequente de repetição da prescrição.",
-          "misuse" : "Este arquétipo não deve ser usado para registrar a quantidade da dose, concentração, forma farmacêutica de uma preparação de medicamento. Estes são registrados como parte da INSTRUCTION de medicamentos, ou CLUSTER de Substâncias Medicamentosas.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record the amount of a medication, vaccine or other therapeutic item to be supplied or supplied to the patient, as part of authorisation, dispensing or administration, both in the context of the original medication order and in a subsequent action. ",
-          "keywords" : [ ],
-          "use" : "Use to record the amount of a medication, vaccine or other therapeutic item to be supplied or supplied to the patient, as part of authorisation, dispensing or administration, both in the context of the original medication order and in a subsequent action. ",
-          "misuse" : "This archetype should not be used to record the original dose amount as part of a dose direction or the strength of a preparation. These are recorded as part of the Medication Order INSTRUCTION, or Medication Substance CLUSTER.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.medication_supply_amount.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-medication_supply_amount-011.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0161.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0158.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_COUNT",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "magnitude",
-                "children" : [ {
-                  "@type" : "C_INTEGER",
-                  "rmTypeName" : "Integer",
-                  "occurrences" : "1..1",
-                  "constraint" : [ {
-                    "lower" : 1,
-                    "lowerIncluded" : true,
-                    "upperIncluded" : false,
-                    "lowerUnbounded" : false,
-                    "upperUnbounded" : true
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0159.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_QUANTITY",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "property",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "terminologyId" : {
-                    "value" : "openehr"
-                  },
-                  "constraint" : [ "380" ]
-                } ]
-              } ],
-              "attributeTuples" : [ {
-                "@type" : "C_ATTRIBUTE_TUPLE",
-                "members" : [ {
-                  "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "magnitude",
-                  "children" : [ ]
-                }, {
-                  "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "units",
-                  "children" : [ ]
-                } ],
-                "tuples" : [ {
-                  "@type" : "C_PRIMITIVE_TUPLE",
-                  "members" : [ {
-                    "@type" : "C_REAL",
-                    "constraint" : [ {
-                      "lower" : 0.0,
-                      "lowerIncluded" : true,
-                      "upperIncluded" : false,
-                      "lowerUnbounded" : false,
-                      "upperUnbounded" : true
-                    } ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "constraint" : [ "1" ]
-                  } ]
-                } ]
-              } ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0160.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0142.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DURATION",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_DURATION",
-                  "rmTypeName" : "DURATION",
-                  "occurrences" : "1..1",
-                  "patternedConstraint" : "PYMWDTS",
-                  "constraint" : [ {
-                    "lower" : "PT0S",
-                    "lowerIncluded" : true,
-                    "upperIncluded" : false,
-                    "lowerUnbounded" : false,
-                    "upperUnbounded" : true
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { },
-        "nb" : { },
-        "pt-br" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "7dff6893-de91-40a2-965d-23f5e776be10",
-    "rmName" : "openehr",
-    "rmRelease" : "1.0.3",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "Silje Ljosland Bakke, John Tore Valand",
-        "organisation" : "Nasjonal IKT HF, Helse Bergen HF"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt-br"
-      },
-      "author" : {
-        "name" : "Beatriz de Faria Leao",
-        "organisation" : "Bleao Informática em Saúde",
-        "email" : "bfleao@terra.com.br"
-      },
-      "accreditation" : "MD, PhD",
       "otherDetails" : { }
     } ]
   } ],
@@ -3253,6 +1300,73 @@
       "email" : "dennis.valk@code24.nl"
     },
     "accreditation" : "Code24 BV",
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "de"
+    },
+    "author" : {
+      "name" : "Anneka Sargeant",
+      "organisation" : "Medizinische Informatik, UMG",
+      "email" : "anneka.sargeant@med.uni-goettingen.de"
+    },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "fi"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nb"
+    },
+    "author" : {
+      "name" : "Lars Bitsch-Larsen",
+      "organisation" : "Haukeland University Hospital of Bergen, Norway",
+      "email" : "lbla@helse-bergen.no"
+    },
+    "accreditation" : "MD, DEAA, MBA, spec in anesthesia, spec in tropical medicine.",
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "it"
+    },
+    "author" : {
+      "name" : "Paolo Anedda",
+      "organisation" : "Inpeco",
+      "email" : "paolo.anedda@inpeco.com"
+    },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "fr"
+    },
+    "author" : {
+      "name" : "Vanessa Pereira",
+      "organisation" : "Better - Pathfinder",
+      "email" : "vanessapereira@protonmail.com"
+    },
     "otherDetails" : { }
   } ]
 }
